@@ -1,0 +1,31 @@
+
+html {
+  position: relative;
+
+  background-color: #1b1b1b;
+  
+  font-family: sans-serif;
+  color: #e7e7e7;
+  font-size: 5em;
+
+  top: 25%;
+  
+  text-align: center;
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::selection {
+  background: #4e586e;
+  text-shadow: none;
+}
+
+p {
+  transition: transform .1s ease-in-out;
+}
+
+p:hover {
+  color: pink;
+  transform: scale(102%);
+}
