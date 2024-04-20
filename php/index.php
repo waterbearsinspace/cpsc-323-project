@@ -6,10 +6,14 @@
 
   <title>CPSC-332 Project</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="">
 
-  <script src="js/app.js" defer></script>
+  <script src="../js/app.js" defer></script>
+
+  <?php
+    require_once "conn.php";
+  ?>
 </head>
 
 <body>
