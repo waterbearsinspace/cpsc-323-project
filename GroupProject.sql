@@ -5,11 +5,11 @@ CREATE DATABASE GROUPPROJECT;
 USE GROUPPROJECT;
 
 CREATE TABLE PRODUCT (
-Pname VARCHAR(255),              -- Name is a reserved word
+Pname VARCHAR(255),              
 Pdescription VARCHAR(255),
-Price DECIMAL,
+Price DECIMAL(10,2),
 NumInStock INT,
-SKU INT NOT NULL PRIMARY KEY    -- Why is this named SKU and not ProductID?? 
+SKU INT NOT NULL PRIMARY KEY    
 );
 
 CREATE TABLE CUSTOMER (
@@ -19,28 +19,45 @@ Email VARCHAR(255),
 CustomerID INT NOT NULL PRIMARY KEY
 );
 
-CREATE TABLE EMPLOYEE (
-Fname VARCHAR(255),				   -- Broke Name apart into Fname and Lname because Name is a reserved word
-Lname VARCHAR(255),
-Sex CHAR(1),                       -- Added another attribute 
-StoreNum INT,
-EmployeeID INT NOT NULL PRIMARY KEY
-);
-
-CREATE TABLE PURCHASEORDER (       -- Renamed to PurchaseOrder because Order is a reserved word
+CREATE TABLE PURCHASEORDER (       
 OrderDate DATE,
 OrderNum INT NOT NULL PRIMARY KEY,
-CustomerID INT,					 
-EmployeeID INT,					
-FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID),
-FOREIGN KEY (EmployeeID) REFERENCES EMPLOYEE(EmployeeID)
+CustomerID INT,					 					
+FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID)
 );
 
 CREATE TABLE ORDERDETAILS (
 OrderNum INT,
 SKU INT,
 Quantity INT,					
-Price DECIMAL,					
+Price DECIMAL(10,2),	-- is this the total price? or just the price of one product? 				
 FOREIGN KEY (OrderNum) REFERENCES PURCHASEORDER(OrderNum),
 FOREIGN KEY (SKU) REFERENCES PRODUCT(SKU)
 );
+
+
+	
+
+
+INSERT INTO PRODUCT (Pname, Pdescription, Price, NumInStock, SKU) VALUES('Cards', 'A deck of 52 cards, rock themed.', 2.99, 10, 123456789);
+INSERT INTO PRODUCT (Pname, Pdescription, Price, NumInStock, SKU) VALUES('Clue', 'The classic mystery game of whodunit! Up to 6 people.',10.99, 5, 987654321);
+INSERT INTO PRODUCT (Pname, Pdescription, Price, NumInStock, SKU) VALUES('Chess & Checkers','Chess and Checkers set with glass board',14.99, 2,112233445);
+
+INSERT INTO CUSTOMER (Cname, Address, Email, CustomerID) VALUES('John','731 Fondren, Houston,TX','jsmith@gmail.com',012345678);
+
+INSERT INTO PURCHASEORDER (OrderDate, OrderNum, CustomerID) VALUES('2024-04-20',1,012345678);
+
+INSERT INTO ORDERDETAILS (OrderNum,SKU,Quantity,Price) VALUES (1, 123456789, 2, 2.99);
+INSERT INTO ORDERDETAILS (OrderNum,SKU,Quantity,Price) VALUES (1, 987654321, 1,10.99);
+
+
+SELECT *
+FROM PRODUCT;
+
+SELECT *
+FROM ORDERDETAILS;
+
+
+
+
+
