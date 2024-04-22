@@ -27,6 +27,16 @@ hr {
   background-color: #00000015;
 }
 
+a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #282bd6;
+}
+
 ::selection {
   background: #bec7da;
   text-shadow: none;
@@ -36,17 +46,23 @@ hr {
   flex: 1;
   display: flex;
 
-  justify-content: end;
   align-items: center;
-
-  gap: 7px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#header {
-  margin-right: auto;
+#logo {
+  font-size: 1.42em;
 }
 
-#login  {
-  font-size: .75em;
+#login-container {
+  flex: 1;
+  display: flex;
+
+  gap: 20px;
+  justify-content: end;
+}
+
+.header-link  {
+  font-size: .85em;
 }
