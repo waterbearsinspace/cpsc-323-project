@@ -9,10 +9,11 @@ Nick Viste
 # Setup
 To correctly set up the local server for development, perform the following steps:
 
-    1. Install xampp
+    1. Install xampp and navigate to its directory
     2. Clone this repo into the /htdocs folder, resulting in /htdocs/cpsc-332-project/
     3. Copy the index.php file inside of the /.OVERWRITE/ folder and paste it into /htdocs/, overwriting the old copy
         - Alternatively, edit line 8 of /htdocs/index.php to point to /cpsc-332-project/ instead of /dashboard/
+    3. Copy the cpsc_323_project folder inside of the /.OVERWRITE/ folder and paste it into /mysql/data, overwriting the old files if any
 
 At this point, we are ready to begin! 
 
