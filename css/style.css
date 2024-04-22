@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-  font-size: 1.25em;
+  font-size: 1.42em;
 }
 
 hr {
@@ -33,9 +33,12 @@ hr {
 }
 
 #header-container {
-  display: flex;
-  justify-content: end;
   flex: 1;
+  display: flex;
+
+  justify-content: end;
+  align-items: center;
+
   gap: 7px;
   margin-top: 10px;
 }
@@ -45,4 +48,5 @@ hr {
 }
 
 #login  {
+  font-size: .75em;
 }
