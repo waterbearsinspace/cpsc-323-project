@@ -27,6 +27,8 @@ hr {
   height: 1px;
   border-style: none;
   background-color: #00000015;
+
+  margin-bottom: 24px;
 }
 
 a {
@@ -112,4 +114,11 @@ a:hover {
   line-height: 2em;
   width: 90px;
   text-align: center;
+}
+
+/* REGISTRATION PAGE STYLES */
+#registration-form {
+  display: flex;
+  flex: 1;
+  gap: 12px;
 }
