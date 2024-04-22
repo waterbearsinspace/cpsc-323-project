@@ -1,4 +1,6 @@
 
+
+/* GLOBAL STYLES */
 :root {
   --side-margin: 32em;
 }
@@ -42,6 +44,8 @@ a:hover {
   text-shadow: none;
 }
 
+/* HEADER STYLES */
+
 #header-container {
   flex: 1;
   display: flex;
@@ -49,6 +53,10 @@ a:hover {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.header-link  {
+  font-size: .85em;
 }
 
 #logo {
@@ -61,8 +69,47 @@ a:hover {
 
   gap: 20px;
   justify-content: end;
+  align-items: center;
 }
 
-.header-link  {
-  font-size: .85em;
+#login {
+  border: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #00000027;
+
+  color: rgb(0, 0, 0);
+
+  line-height: 2em;
+  width: 90px;
+  text-align: center;
+}
+
+#login:hover {
+  border-color: #000000;
+  color: #282bd6;
+  line-height: 2em;
+  width: 90px;
+  text-align: center;
+}
+
+#register {
+  background-color: #000000;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  
+  line-height: 2em;
+  width: 90px;
+  text-align: center;
+}
+
+#register:hover {
+  background-color: #7e7e7e;
+  border-color: #7e7e7e;
+  color: #282bd6;
+
+  line-height: 2em;
+  width: 90px;
+  text-align: center;
 }

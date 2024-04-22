@@ -16,6 +16,10 @@
     require_once "../page-elements/header.php";
   ?>
 
+  <?php
+    require_once "../sql/conn.php";
+  ?>
+
   LOG IN PAGE
 
 </body>

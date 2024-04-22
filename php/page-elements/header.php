@@ -3,7 +3,7 @@
     
     <div id = "login-container">
       <a href = "/cpsc-332-project/php/pages/login.php" id = "login" class = "header-link">LOG IN</a>
-      <a href = "/cpsc-332-project/php/pages/register.php" id = "sign-up" class = "header-link">SIGN UP</a>
+      <a href = "/cpsc-332-project/php/pages/register.php" id = "register" class = "header-link">REGISTER</a>
     </div>
     
   </div>
