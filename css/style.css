@@ -1,31 +1,48 @@
 
+:root {
+  --side-margin: 32em;
+}
+
 html {
   position: relative;
+  margin-left: var(--side-margin);
+  margin-right: var(--side-margin);
 
-  background-color: #1b1b1b;
+  background-color: #ffffff;
   
   font-family: sans-serif;
-  color: #e7e7e7;
-  font-size: 5em;
+  color: #000000;
+}
 
-  top: 25%;
-  
-  text-align: center;
-  max-width: 75vw;
-  margin-left: auto;
-  margin-right: auto;
+h1 {
+  font-size: 1.25em;
+}
+
+hr {
+  margin-left: calc(var(--side-margin) * -1);
+  margin-right: calc(var(--side-margin) * -1);
+
+  height: 1px;
+  border-style: none;
+  background-color: #00000015;
 }
 
 ::selection {
-  background: #4e586e;
+  background: #bec7da;
   text-shadow: none;
 }
 
-p {
-  transition: transform .1s ease-in-out;
+#header-container {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+  gap: 7px;
+  margin-top: 10px;
 }
 
-p:hover {
-  color: pink;
-  transform: scale(102%);
+#header {
+  margin-right: auto;
+}
+
+#login  {
 }

@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="">
 
-  <script src="../js/app.js" defer></script>
-
   <?php
     require_once "conn.php";
   ?>
@@ -18,8 +16,12 @@
 
 <body>
 
-  <p>CPSC-332 Project</p>
-  <p>☺</p>
+  <div id = "header-container">
+    <h1 id = "header"> CPSC-332 PROJECT </h1>
+    <h1 id = "login">LOGIN<h1>
+  </div>
+
+  <hr/>
 
 </body>
 
