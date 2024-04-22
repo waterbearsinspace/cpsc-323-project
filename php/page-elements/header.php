@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <div id = "header-container">
     <a href = "/index.php" id = "logo"> CPSC-332 PROJECT </a>
     

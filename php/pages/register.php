@@ -16,11 +16,7 @@
     require_once "../page-elements/header.php";
   ?>
 
-  <?php
-    require_once "../sql/register.php";
-  ?>
-
-  <form id = "registration-form" action="register.php" method="post">
+  <form class = "login-form" action="register.php" method="post">
 
     <label for="username">Username:</label> 
     <input id="username" name="username" required="" type="text" />

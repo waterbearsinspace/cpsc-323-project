@@ -17,10 +17,16 @@
   ?>
 
   <?php
-    require_once "../sql/conn.php";
+    require_once "../sql/login.php";
   ?>
+  
+  <form class = "login-form" action="login.php" method="post">
 
-  LOG IN PAGE
+    <label for="username">Username:</label>
+    <input id="username" name="username" required="" type="text" />
+    <label for="password">Password:</label> <input id="password" name="password" required="" type="password" />
+    <input name="login" type="submit" value="Login" />
+  </form>
 
 </body>
 

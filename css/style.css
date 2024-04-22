@@ -117,7 +117,7 @@ a:hover {
 }
 
 /* REGISTRATION PAGE STYLES */
-#registration-form {
+.login-form {
   display: flex;
   flex: 1;
   gap: 12px;
