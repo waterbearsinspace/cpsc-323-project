@@ -120,7 +120,7 @@ a:hover {
 
 .display-name {
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   white-space: nowrap;
   text-overflow: ellipsis;
