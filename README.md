@@ -21,4 +21,4 @@ To test the server, simply open the XAMPP Control Panel and start the Apache and
 
 # Notes
 - Project files stored in /xampp/htdocs/cpsc-332-project/
-- SQL files stored in /xampp/mysql/data/
+- SQL files stored in /xampp/mysql/data/cpsc_332_project/
