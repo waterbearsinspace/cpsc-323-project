@@ -36,6 +36,19 @@ FOREIGN KEY (SKU) REFERENCES PRODUCT(SKU)
 );
 
 
+ -- This procedure is for changing the quantity of an product
+ -- pass in the product ID, and the quantity of items purchased 
+ -- THIS DOES NOT CHECK IF THE CUSTOMER IS BUYING MORE THAN WHAT WE HAVE IN STOCK
+DELIMITER \\ 
+CREATE PROCEDURE UpdateQuantity (ProductID INT, QtyBought INT)
+BEGIN
+ 
+	UPDATE PRODUCT
+    SET NumInStock = (NumInStock - QtyBought)
+    WHERE SKU = ProductID;
+
+    
+END \\
 	
 
 
@@ -48,7 +61,7 @@ INSERT INTO CUSTOMER (Cname, Address, Email, CustomerID) VALUES('John','731 Fond
 INSERT INTO PURCHASEORDER (OrderDate, OrderNum, CustomerID) VALUES('2024-04-20',1,012345678);
 
 INSERT INTO ORDERDETAILS (OrderNum,SKU,Quantity,Price) VALUES (1, 123456789, 2, 2.99);
-INSERT INTO ORDERDETAILS (OrderNum,SKU,Quantity,Price) VALUES (1, 987654321, 1,10.99);
+INSERT INTO ORDERDETAILS (OrderNum,SKU,Quantity,Price) VALUES (1, 987654321, 1, 10.99);
 
 
 SELECT *
