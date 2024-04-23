@@ -1,22 +1,35 @@
-<?php if (isset($_POST['register'])) { 
+<?php
 
-// Connect to the database 
-$mysqli = new mysqli("localhost", "root", "", "cpsc_332_project"); 
+    // Source: sitepoint.com
 
-// Check for errors 
-if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
+    if (isset($_POST['register'])) { 
 
-// Prepare and bind the SQL statement 
-$stmt = $mysqli->prepare("INSERT INTO users (Username, UserEmail, UserPassword) VALUES (?, ?, ?)"); $stmt->bind_param("sss", $username, $email, $password); 
+        // Connect to the database 
+        $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project"); 
 
-// Get the form data 
-$username = $_POST['username']; $email = $_POST['email']; $password = $_POST['password']; 
+        // Check for errors 
+        if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
 
-// Hash the password 
-$password = password_hash($password, PASSWORD_DEFAULT); 
+        // Prepare and bind the SQL statement 
+        $stmt = $mysqli->prepare("INSERT INTO users (Username, UserEmail, UserPassword) VALUES (?, ?, ?)"); $stmt->bind_param("sss", $username, $email, $password); 
 
-// Execute the SQL statement 
-if ($stmt->execute()) { echo "New account created successfully!"; } else { echo "Error: " . $stmt->error; } 
+        // Get the form data 
+        $username = $_POST['username']; $email = $_POST['email']; $password = $_POST['password']; 
 
-// Close the connection 
-$stmt->close(); $mysqli->close(); }
+        // Hash the password 
+        $password = password_hash($password, PASSWORD_DEFAULT); 
+
+        // Execute the SQL statement 
+        if ($stmt->execute()) {  
+            // Log the user in
+            $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
+
+            // Redirect to home page
+            header("Location: /index.php"); 
+        } 
+
+        else { echo "Error: " . $stmt->error; } 
+
+        // Close the connection 
+        $stmt->close(); $mysqli->close(); 
+    }

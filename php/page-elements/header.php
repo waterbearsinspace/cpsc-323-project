@@ -1,15 +1,14 @@
 <?php
+
   session_start();
+
+  // Serves different headers depending on whether the user is logged in or not  
+  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    require_once "header-logged.php";
+  } 
+  else {
+    require_once "header-unlogged.php";
+  }
+
 ?>
 
-<div id = "header-container">
-    <a href = "/index.php" id = "logo"> CPSC-332 PROJECT </a>
-    
-    <div id = "login-container">
-      <a href = "/cpsc-332-project/php/pages/login.php" id = "login" class = "header-link">LOG IN</a>
-      <a href = "/cpsc-332-project/php/pages/register.php" id = "register" class = "header-link">REGISTER</a>
-    </div>
-    
-  </div>
-
-  <hr/>

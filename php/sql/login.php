@@ -1,37 +1,42 @@
-<?php if (isset($_POST['login'])) { 
+<?php 
 
-// Connect to the database 
-$mysqli = new mysqli("localhost", "root", "", "cpsc_332_project"); 
+    // Source: sitepoint.com
 
-// Check for errors 
-if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
+    if (isset($_POST['login'])) { 
 
-// Prepare and bind the SQL statement 
-$stmt = $mysqli->prepare("SELECT UserID, UserPassword FROM Users WHERE Username = ?"); $stmt->bind_param("s", $username); 
+        // Connect to the database 
+        $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project"); 
 
-// Get the form data 
-$username = $_POST['username']; $password = $_POST['password']; 
+        // Check for errors 
+        if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
 
-// Execute the SQL statement 
-$stmt->execute(); $stmt->store_result(); 
+        // Prepare and bind the SQL statement 
+        $stmt = $mysqli->prepare("SELECT UserID, UserPassword FROM Users WHERE Username = ?"); $stmt->bind_param("s", $username); 
 
-// Check if the user exists 
-if ($stmt->num_rows > 0) { 
+        // Get the form data 
+        $username = $_POST['username']; $password = $_POST['password']; 
 
-// Bind the result to variables 
-$stmt->bind_result($id, $hashed_password); 
+        // Execute the SQL statement 
+        $stmt->execute(); $stmt->store_result(); 
 
-// Fetch the result 
-$stmt->fetch(); 
+        // Check if the user exists 
+        if ($stmt->num_rows > 0) { 
 
-// Verify the password 
-if (password_verify($password, $hashed_password)) { 
+        // Bind the result to variables 
+        $stmt->bind_result($id, $hashed_password); 
 
-// Set the session variables 
-$_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
+        // Fetch the result 
+        $stmt->fetch(); 
 
-// Redirect to the user's dashboard 
-header("Location: /index.php"); exit; } else { echo "Incorrect password!"; } } else { echo "User not found!"; } 
+        // Verify the password 
+        if (password_verify($password, $hashed_password)) { 
 
-// Close the connection 
-$stmt->close(); $mysqli->close(); }
+        // Set the session variables 
+        $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
+
+        // Redirect to the user's dashboard 
+        header("Location: /index.php"); exit; } else { echo "Incorrect password!"; } } else { echo "User not found!"; } 
+
+        // Close the connection 
+        $stmt->close(); $mysqli->close(); 
+    }

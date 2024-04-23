@@ -12,8 +12,14 @@
 
 <body>
 
+  <!-- Displays the header -->
   <?php
     require_once "../page-elements/header.php";
+  ?>
+
+  <!-- Registration form -->
+  <?php
+    require_once "../sql/register.php";
   ?>
 
   <form class = "login-form" action="register.php" method="post">

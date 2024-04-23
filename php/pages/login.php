@@ -12,10 +12,12 @@
 
 <body>
 
+  <!-- Displays the header -->
   <?php
     require_once "../page-elements/header.php";
   ?>
 
+  <!-- Login form-->
   <?php
     require_once "../sql/login.php";
   ?>
