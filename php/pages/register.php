@@ -1,5 +1,6 @@
 <!doctype html>
 
+<!-- Loads the html header -->
 <?php
   require_once "../page-elements/html-head.php";
 ?>
