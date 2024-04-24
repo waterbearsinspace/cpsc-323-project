@@ -8,6 +8,10 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon@4x.png" sizes="48x48" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon@3x.png" sizes="32x32" />
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon@2x.png" sizes="16x16" />
 </head>
 
 <body>
