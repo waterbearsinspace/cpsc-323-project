@@ -1,6 +1,10 @@
-<div class ="item-container">
+<div class="item-container">
 
-    <img class ="item-image" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081">
+    <img class="item-image" src="https://m.media-amazon.com/images/I/71AIv5OOuNL._AC_UF894,1000_QL80_DpWeblab_.jpg">
 
-    TEXT
+    <div class="item-name">this is the name of an item it is very cool</div>
+    <div class="purchase-info-container">
+        <div class="price">$200</div>
+        <div class="to-cart">♥</div>
+    </div>
 </div>
