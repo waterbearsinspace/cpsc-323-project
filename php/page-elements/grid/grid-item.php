@@ -1,7 +1,3 @@
-<?php
-    include (__DIR__ . "/../sql/fetch-item-data.php");
-?>
-
 <div class="item-container">
 
     <img class="item-image" src=<?= $ImageURL ?>>

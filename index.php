@@ -15,22 +15,7 @@
 
   <div class="item-container-container">
     <?php
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
-      include ("./php/page-elements/grid-item.php");
+      include (__DIR__ . "/php/page-elements/grid/generate-grid.php");
     ?>
   </div>
 
