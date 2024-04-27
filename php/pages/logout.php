@@ -2,19 +2,19 @@
 
 <!-- Loads the html header -->
 <?php
-  require_once "../page-elements/html-head.php";
+  require_once __DIR__ . "/../page-elements/html-head.php";
 ?>
 
 <body>
 
   <!-- Logs the user out -->
   <?php
-    require_once "../sql/logout.php";
+    require_once __DIR__ . "/../sql/logout.php";
   ?>
 
   <!-- Displays the header -->
   <?php
-    require_once "../page-elements/header.php";
+    require_once __DIR__ . "/../page-elements/header/header.php";
   ?>
 
   You have been logged out.

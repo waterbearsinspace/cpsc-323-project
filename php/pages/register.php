@@ -2,19 +2,19 @@
 
 <!-- Loads the html header -->
 <?php
-  require_once "../page-elements/html-head.php";
+  require_once __DIR__ . "/../page-elements/html-head.php";
 ?>
 
 <body>
 
   <!-- Displays the header -->
   <?php
-    require_once "../page-elements/header.php";
+    require_once __DIR__ . "/../page-elements/header/header.php";
   ?>
 
   <!-- Registration form -->
   <?php
-    require_once "../sql/register.php";
+    require_once __DIR__ . "/../sql/register.php";
   ?>
 
   <form class="user-form" action="register.php" method="post">

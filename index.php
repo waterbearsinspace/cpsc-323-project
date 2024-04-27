@@ -1,0 +1,39 @@
+
+<!doctype html>
+
+<!-- Loads the html header -->
+<?php
+  require_once (__DIR__ . "/php/page-elements/html-head.php");
+?>
+
+<body>
+
+  <!-- Displays the header -->
+  <?php
+    require_once(__DIR__ . "/php/page-elements/header/header.php");
+  ?>
+
+  <div class="item-container-container">
+    <?php
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+      include ("./php/page-elements/grid-item.php");
+    ?>
+  </div>
+
+</body>
+
+</html>
