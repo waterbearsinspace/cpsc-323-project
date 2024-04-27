@@ -15,22 +15,22 @@
 
   <div class="item-container-container">
   <?php
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
-    include "./page-elements/item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
+    include "./page-elements/grid-item.php";
   ?>
   </div>
 
