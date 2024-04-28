@@ -12,7 +12,7 @@
         ProductDescription, 
         ProductPrice, 
         ProductQuantity, 
-        ImageURL
+        CoverURL
         FROM Products"); 
 
     // Execute the SQL statement 
@@ -21,11 +21,11 @@
     // Check if the product exists 
     if ($stmt->num_rows > 0) { 
         // Reset variables
-        $ProductName = $ProductDescription = $ImageURL = "";
+        $ProductName = $ProductDescription = $CoverURL = "";
         $ProductPrice = $ProductQuantity = 0;
 
         // Bind the result to variables 
-        $stmt->bind_result($ProductName, $ProductDescription, $ProductPrice, $ProductQuantity, $ImageURL); 
+        $stmt->bind_result($ProductName, $ProductDescription, $ProductPrice, $ProductQuantity, $CoverURL); 
     
         // Fetch the result 
         while($stmt->fetch()) {

@@ -1,10 +1,11 @@
-<div class="item-container">
+<div class="grid-item-container">
 
-    <img class="item-image" src=<?= $ImageURL ?>>
+    <div class="grid-item-cover-container">
+        <img class="grid-item-cover" src=<?= $CoverURL ?>>
+    </div> 
 
-    <div class="item-name"><?= $ProductName ?></div>
-    <div class="purchase-info-container">
-        <div class="price"><div>$</div><div><?= $ProductPrice ?></div></div>
-        <div class="to-cart">♥</div>
+    <div class="grid-purchase-info-container"> 
+        <div class="grid-item-name"><?= $ProductName ?></div>
+        <div class="grid-price"><div>$</div><div><?= $ProductPrice ?></div></div>
     </div>
 </div>
