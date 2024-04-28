@@ -17,14 +17,9 @@ html {
 }
 
 hr {
-  margin-left: calc(var(--side-margin) * -1);
-  margin-right: calc(var(--side-margin) * -1);
-
   height: 1px;
   border-style: none;
   background-color: #00000015;
-
-  margin-bottom: 24px;
 }
 
 a {
@@ -194,43 +189,55 @@ a:hover {
 .grid-game-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
-  width: 16em;
+  width: 15em;
   height: 19.5em;
-  gap: .5em;
+}
+
+.grid-game-cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15em;
+  height: 15em;
 }
 
 .grid-game-cover {
   object-fit:contain;
+  overflow:hidden;
   
-  width: 14m;
+  width: 14em;
   height: 14em;
   
-  transition: transform .15s ease;
+  filter: grayscale(75%);
+
+  transition: all .25s ease;
 }
 
 .grid-game-cover:hover {
-  transform: scale(1.1);
-}
 
-.grid-game-name {
-  font-weight: bold;
-  text-transform: uppercase;
-
-  align-self: flex-start;
-
-  max-width: 80%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  width: 15em;
+  height: 15em;
+  
+  filter: grayscale(0%);
 }
 
 .grid-purchase-info-container{
   display: flex;
   justify-content:space-between;
   width: 100%;
+}
+
+.grid-game-name {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  max-width: 80%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .grid-price {

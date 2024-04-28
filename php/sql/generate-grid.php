@@ -13,7 +13,8 @@
         ProductPrice, 
         ProductQuantity, 
         CoverURL
-        FROM Products"); 
+        FROM Products
+        ORDER BY ProductName ASC"); 
 
     // Execute the SQL statement 
     $stmt->execute(); $stmt->store_result(); 
