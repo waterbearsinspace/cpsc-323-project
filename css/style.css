@@ -179,8 +179,8 @@ a:hover {
   text-align: center;
 }
 
-/* GRID ITEM STYLES */
-.grid-item-container-container {
+/* GRID GAME STYLES */
+.grid-game-container-container {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
@@ -191,7 +191,7 @@ a:hover {
   row-gap: 40px;
 }
 
-.grid-item-container {
+.grid-game-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -202,7 +202,7 @@ a:hover {
   gap: .5em;
 }
 
-.grid-item-cover {
+.grid-game-cover {
   object-fit:contain;
   
   width: 14m;
@@ -211,11 +211,11 @@ a:hover {
   transition: transform .15s ease;
 }
 
-.grid-item-cover:hover {
+.grid-game-cover:hover {
   transform: scale(1.1);
 }
 
-.grid-item-name {
+.grid-game-name {
   font-weight: bold;
   text-transform: uppercase;
 

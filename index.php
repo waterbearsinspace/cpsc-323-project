@@ -13,7 +13,7 @@
     require_once(__DIR__ . "/php/page-elements/header/header.php");
   ?>
 
-  <div class="grid-item-container-container">
+  <div class="grid-game-container-container">
     <?php
       include (__DIR__ . "/php/sql/generate-grid.php");
     ?>

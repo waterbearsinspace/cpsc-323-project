@@ -29,8 +29,8 @@
     
         // Fetch the result 
         while($stmt->fetch()) {
-            // Generate grid item
-            include (__DIR__ . "/../page-elements/grid/grid-item.php");
+            // Generate grid game
+            include (__DIR__ . "/../page-elements/grid/grid-game.php");
         } 
     }  
     
