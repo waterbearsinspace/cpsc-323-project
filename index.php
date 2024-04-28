@@ -15,7 +15,7 @@
 
   <div class="item-container-container">
     <?php
-      include (__DIR__ . "/php/page-elements/grid/generate-grid.php");
+      include (__DIR__ . "/php/sql/generate-grid.php");
     ?>
   </div>
 

@@ -6,28 +6,36 @@
     // Check for errors 
     if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
 
-    // Set ProductID
-    $ProductID = "162886";
-
     // Prepare and bind the SQL statement 
-    $stmt = $mysqli->prepare("SELECT ProductName, ProductDescription, ProductPrice, ProductQuantity, ImageURL
-        FROM Products WHERE ProductID = ?"); $stmt->bind_param("s", $ProductID); 
+    $stmt = $mysqli->prepare("SELECT 
+        ProductName, 
+        ProductDescription, 
+        ProductPrice, 
+        ProductQuantity, 
+        ImageURL
+        FROM Products"); 
 
     // Execute the SQL statement 
     $stmt->execute(); $stmt->store_result(); 
 
     // Check if the product exists 
     if ($stmt->num_rows > 0) { 
+        // Reset variables
+        $ProductName = $ProductDescription = $ImageURL = "";
+        $ProductPrice = $ProductQuantity = 0;
+
         // Bind the result to variables 
         $stmt->bind_result($ProductName, $ProductDescription, $ProductPrice, $ProductQuantity, $ImageURL); 
-
+    
         // Fetch the result 
-        $stmt->fetch(); 
-        
-        // Generate grid item
-        include (__DIR__ . "/grid-item.php");
-    }  else { echo "User not found!"; } 
+        while($stmt->fetch()) {
+            // Generate grid item
+            include (__DIR__ . "/../page-elements/grid/grid-item.php");
+        } 
+    }  
+    
+    else { echo "Product not found!"; }
 
+        
     // Close the connection 
     $stmt->close(); $mysqli->close(); 
-?>
