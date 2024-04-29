@@ -18,7 +18,7 @@
 
     $ProductID=$_GET['ID'];
 
-    include (__DIR__ . "/../sql/fetch-game-data.php");
+    include (__DIR__ . "/../sql/game/fetch-game-data.php");
 
     $ProductDescription = str_replace("\n", '<br>', $ProductDescription)
   ?>
@@ -30,6 +30,8 @@
     <div class="page-game-price">$<?= $ProductPrice ?></div>
     <div class="page-game-quantity"><?= $ProductQuantity ?></div>
   </div>
+
+  
 
 </body>
 

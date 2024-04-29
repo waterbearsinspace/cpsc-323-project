@@ -15,7 +15,7 @@
 
   <div class="grid-game-container-container">
     <?php
-      include (__DIR__ . "/php/sql/generate-grid.php");
+      include (__DIR__ . "/php/sql/game/generate-grid.php");
     ?>
   </div>
 

@@ -9,7 +9,7 @@
 
   <!-- Logs the user out -->
   <?php
-    require_once __DIR__ . "/../sql/logout.php";
+    require_once __DIR__ . "/../sql/user/logout.php";
   ?>
 
   <!-- Displays the header -->

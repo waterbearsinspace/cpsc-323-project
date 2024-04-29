@@ -14,7 +14,7 @@
 
   <!-- Registration form -->
   <?php
-    require_once __DIR__ . "/../sql/register.php";
+    require_once __DIR__ . "/../sql/user/register.php";
   ?>
 
   <form class="user-form" action="register.php" method="post">
