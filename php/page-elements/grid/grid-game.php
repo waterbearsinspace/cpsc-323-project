@@ -11,7 +11,7 @@
     <hr style="width:100%"/>
 
     <div class="grid-purchase-info-container"> 
-        <div class="grid-game-name"><?= $ProductName ?></div>
+        <a href=<?= $GameURL ?> class="grid-game-name"><?= $ProductName ?></a>
         <div class="grid-price"><div>$</div><div><?= $ProductPrice ?></div></div>
     </div>
 </div>
