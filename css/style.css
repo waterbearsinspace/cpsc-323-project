@@ -238,6 +238,12 @@ a:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+
+  color: #000000;
+}
+
+.grid-game-name:hover {
+  color: #282bd6;
 }
 
 .grid-price {
@@ -245,4 +251,30 @@ a:hover {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+}
+
+/* PAGE GAME STYLES */
+.page-game-container-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.page-game-cover-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.page-game-cover {
+  object-fit:contain;
+  overflow:hidden;
+  width: 30em;
+  height: 30em;
 }

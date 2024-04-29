@@ -1,7 +1,11 @@
+<?php
+    $GameURL="/cpsc-332-project/php/pages/game.php?ID=" . $ProductID;
+?>
+
 <div class="grid-game-container">
 
     <div class="grid-game-cover-container">
-        <img class="grid-game-cover" src=<?= $CoverURL ?>>
+        <a href=<?= $GameURL ?>><img class="grid-game-cover" src=<?= $CoverURL ?>></a>
     </div> 
     
     <hr style="width:100%"/>
