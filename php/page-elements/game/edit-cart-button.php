@@ -7,12 +7,12 @@
     name="ProductID" value=<?= $ProductID ?>
   >
 
-  <input type="number" name="PurchaseQuantity"
-    name="PurchaseQuantity" min="0" max=<?= $ProductQuantity ?>
+  <input class="numberInput" type="number" name="PurchaseQuantity"
+    name="PurchaseQuantity" min="1" max=<?= $ProductQuantity ?>
     value="1"
   >
 
-  <input type="submit" name="update-cart"
-    value="Update Cart"
+  <input class="form-button cart-qty-button" type="submit" name="update-cart"
+    value="Update Qty"
   >
 </form>

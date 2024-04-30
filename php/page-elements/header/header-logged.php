@@ -1,9 +1,9 @@
-<div class = "header-container">
+<header class = "header-container">
   <a href = "/index.php" class = "logo">
     CPSC-332 PROJECT
   </a>
 
-  <div class = "login-container">
+  <nav class = "login-container">
     <div class = 'display-name'>
       <?php
         echo($_SESSION['username']);
@@ -19,8 +19,8 @@
       class = "login logout header-link">
       LOG OUT
     </a>
-  </div>
-</div>
+  </nav>
+</header>
 
 <hr style="
   margin-left: calc(var(--side-margin) * -1);

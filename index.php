@@ -11,7 +11,9 @@
     require __DIR__ . "/php/page-elements/header/header.php";
   ?>
 
-  GAMES
+  <div class="games-title">GAMES</div>
+
+  <hr style="width:100%"/>
 
   <!-- Generate grid of games -->
   <div class="grid-game-container-container">

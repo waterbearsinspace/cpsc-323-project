@@ -17,7 +17,8 @@
     Products.CoverURL
     FROM Products
     INNER JOIN Carts ON Products.ProductID = Carts.ProductID
-    WHERE Carts.UserID = $_SESSION[id]"
+    WHERE Carts.UserID = $_SESSION[id]
+    ORDER BY ProductName ASC"
   );
 
   // Execute the SQL statement

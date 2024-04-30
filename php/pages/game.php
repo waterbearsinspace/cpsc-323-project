@@ -38,7 +38,7 @@
     </div>
 
     <div class="page-game-quantity">
-      <?= $ProductQuantity ?>
+      Amount in Stock: <?= $ProductQuantity ?>
     </div>
   </div>
 

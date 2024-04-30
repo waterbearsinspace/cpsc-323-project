@@ -1,11 +1,15 @@
-/* GLOBAL STYLES */
+/* GLOBAL DEFINITIONS */
 :root {
   --side-margin: 22em;
 }
 
+/* HTML STYLES */
+html, a {
+  color: #000000;
+}
+
 html {
   background-color: #ffffff;
-  color: #000000;
   font-family: sans-serif;
   margin-left: var(--side-margin);
   margin-right: var(--side-margin);
@@ -19,7 +23,6 @@ hr {
 }
 
 a {
-  color: #000000;
   font-weight: bold;
   text-decoration: none;
 }
@@ -34,50 +37,49 @@ a:hover {
 }
 
 /* HEADER STYLES */
-.header-container {
+.header-container, .login-container {
   align-items: center;
   display: flex;
   flex: 1;
-  margin-bottom: 20px;
-  margin-top: 20px;
 }
 
-.header-link  {
-  font-size: .85em;
+.login, .register {
+  border-style: solid;
+  border-width: 1px;
+  line-height: 2em;
+  text-align: center;
+}
+
+.header-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .logo {
   font-size: 1.42em;
 }
 
+.header-link  {
+  font-size: .85em;
+}
+
 .login-container {
-  align-items: center;
-  display: flex;
-  flex: 1;
   gap: 20px;
   justify-content: end;
 }
 
 .login {
   border-color: #00000027;
-  border-style: solid;
-  border-width: 1px;
-  border: #000000;
   color: rgb(0, 0, 0);
-  line-height: 2em;
-  text-align: center;
   width: 90px;
 }
 
 .login:hover {
   border-color: #000000;
   color: #282bd6;
-  line-height: 2em;
-  text-align: center;
-  width: 90px;
 }
 
-.logout.login:hover {
+.logout:hover {
   background: #e20a0a;
   border-color: #e20a0a;
   color: #ffffff;
@@ -85,11 +87,7 @@ a:hover {
 
 .register {
   background-color: #000000;
-  border-style: solid;
-  border-width: 1px;
-  color: white;
-  line-height: 2em;
-  text-align: center;
+  color: #ffffff;
   width: 114px;
 }
 
@@ -97,9 +95,6 @@ a:hover {
   background-color: #7e7e7e;
   border-color: #7e7e7e;
   color: #282bd6;
-  line-height: 2em;
-  text-align: center;
-  width: 114px;
 }
 
 .display-name {
@@ -111,13 +106,20 @@ a:hover {
   white-space: nowrap;
 }
 
-/* LOG IN AND REGISTRATION PAGE STYLES */
+/* FORM STYLES */
+.user-form, .form-content {
+  display: flex;
+  justify-content: center;
+}
+
+.form-content, .form-button {
+  text-transform: uppercase;
+}
+
 .user-form {
   align-items: center;
-  display: flex;
   gap: 12px;
   height: 80vh;
-  justify-content: center;
 }
 
 .form-content {
@@ -126,14 +128,11 @@ a:hover {
   border-style: solid;
   border-width: 2px;
   box-shadow: 8px 8px 10px rgb(102, 102, 102);
-  display: flex;
   flex-direction: column;
   font-weight: bold;
   gap: 20px;
   height: 200px;
-  justify-content: center;
   padding: 150px;
-  text-transform: uppercase;
   width: 200px;
 }
 
@@ -145,48 +144,58 @@ a:hover {
   font-weight: bold;
   line-height: 2em;
   text-align: center;
-  text-transform: uppercase;
   width: auto;
 }
 
 .form-button:hover {
   background-color: #313131;
-  text-align: center;
-  width: auto;
+  border-color: #313131;
 }
 
 /* GRID GAME STYLES */
-.grid-game-container-container {
+.grid-game-container-container, .grid-game-container,
+.grid-game-cover-container, .grid-purchase-info-container {
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  gap: 12px;
+}
+
+.grid-game-container, .grid-game-cover-container {
+  width: 15em;
+}
+
+.grid-game-container-container, .grid-purchase-info-container  {
   justify-content: space-between;
+}
+
+.games-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.grid-game-container-container {
+  flex-wrap: wrap;
+  gap: 12px;
   row-gap: 40px;
 }
 
 .grid-game-container {
   align-items: center;
-  display: flex;
   flex-direction: column;
   height: 19.5em;
   justify-content: space-around;
-  width: 15em;
 }
 
 .grid-game-cover-container {
   align-items: center;
-  display: flex;
   height: 15em;
   justify-content: center;
-  width: 15em;
 }
 
 .grid-game-cover {
   filter: grayscale(75%);
   height: 14em;
-  object-fit:contain;
-  overflow:hidden;
+  object-fit: contain;
+  overflow: hidden;
   transition: all .25s ease;
   width: 14em;
 }
@@ -197,9 +206,7 @@ a:hover {
   width: 15em;
 }
 
-.grid-purchase-info-container{
-  display: flex;
-  justify-content:space-between;
+.grid-purchase-info-container {
   width: 100%;
 }
 
@@ -217,25 +224,19 @@ a:hover {
   color: #282bd6;
 }
 
-.grid-price {
+/* PAGE GAME STYLES */
+.page-game-container-container, .page-game-cover-container {
   display: flex;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
 }
 
-/* PAGE GAME STYLES */
 .page-game-container-container {
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 1;
   gap: 12px;
   justify-content: space-between;
 }
 
 .page-game-cover-container {
-  display: flex;
   height: auto;
   justify-content: center;
   width: 100%;
@@ -243,59 +244,60 @@ a:hover {
 
 .page-game-cover {
   height: 30em;
-  object-fit:contain;
-  overflow:hidden;
+  object-fit: contain;
+  overflow: hidden;
   width: 30em;
 }
 
+.please {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* CART GAME STYLES */
-.cart-game-container-container {
+.cart-game-container-container, .cart-game-container,
+.cart-game-cover-container {
   display: flex;
+}
+
+.cart-game-container, .cart-game-cover-container {
+  align-items: center;
+}
+
+.cart-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cart-game-container-container {
   flex-direction: column;
   flex: 1;
-  gap: 20px;
-  justify-content: space-between;
+  gap: 4px;
 }
 
 .cart-game-container {
-  align-items: center;
-  background-color: #7e7e7e;
-  display: flex;
+  height: auto;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .cart-game-cover-container {
-  align-items: center;
-  display: flex;
-  height: 15em;
   justify-content: center;
-  width: 15em;
 }
 
 .cart-game-cover {
-  filter: grayscale(75%);
-  height: 14em;
+  height: 8em;
   object-fit:contain;
   overflow:hidden;
   transition: all .25s ease;
-  width: 14em;
-}
-
-.cart-game-cover:hover {
-  filter: grayscale(0%);
-  height: 15em;
-  width: 15em;
-}
-
-.cart-purchase-info-container{
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  width: 100%;
+  width: 8em;
 }
 
 .cart-game-name {
   font-weight: bold;
+  width: 45em;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
@@ -309,4 +311,35 @@ a:hover {
 .cart-price {
   display: flex;
   text-transform: uppercase;
+}
+
+.cart-qty-button {
+  margin: 0, 16px, 0;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+
+.numberInput {
+  height: 2em;
+  width: 3em;
+  text-align: end;
+}
+
+.delete-button {
+  background-color: #00000000;
+  border-style: none;
+}
+
+.delete-button-image {
+  align-self: center;
+  filter: brightness(50%);
+  height: auto;
+  justify-self: center;
+  margin: 0;
+  transition: all .075s ease;
+  width: 1.5em;
+}
+
+.delete-button-image:hover {
+  filter: brightness(100%);
 }

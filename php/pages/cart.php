@@ -11,7 +11,7 @@
     require __DIR__ . "/../page-elements/header/header.php";
   ?>
 
-  CART
+  <div class="cart-title">CART</div>
 
   <!-- Display all games in user's cart -->
   <div class="cart-game-container-container">

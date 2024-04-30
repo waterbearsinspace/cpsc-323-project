@@ -15,7 +15,7 @@
     <a href=<?= $GameURL ?> class="grid-game-name">
       <?= $ProductName ?>
     </a>
-    <div class="grid-price">
+    <div>
       $<?= $ProductPrice ?>
     </div>
   </div>
