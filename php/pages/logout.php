@@ -9,7 +9,7 @@
 
   <!-- Logs the user out -->
   <?php
-    require_once __DIR__ . "/../sql/user/logout.php";
+    require_once __DIR__ . "/../sql/user-account/logout.php";
   ?>
 
   <!-- Displays the header -->
@@ -18,8 +18,6 @@
   ?>
 
   You have been logged out.
-
-  <!-- NOTE: Alternatively, we can redirect straight to the homepage from sql/logout.php -->
 
 </body>
 

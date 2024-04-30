@@ -21,6 +21,14 @@
 
         // Execute the SQL statement 
         if ($stmt->execute()) {  
+            // Get user ID
+            $getID = $mysqli->prepare("SELECT UserID FROM Users WHERE Username = ?"); 
+            $getID->bind_param("s", $username); 
+            $getID->execute();
+            $getID->store_result();
+            $getID->bind_result($id);
+            $getID->fetch();
+
             // Log the user in
             $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
 

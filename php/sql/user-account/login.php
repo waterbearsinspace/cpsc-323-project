@@ -17,7 +17,8 @@
         $username = $_POST['username']; $password = $_POST['password']; 
 
         // Execute the SQL statement 
-        $stmt->execute(); $stmt->store_result(); 
+        $stmt->execute(); 
+        $stmt->store_result(); 
 
         // Check if the user exists 
         if ($stmt->num_rows > 0) { 
