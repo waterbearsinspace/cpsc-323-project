@@ -8,41 +8,44 @@
   }
 
   // Prepare the SQL statement
-  $generateGrid = $mysqli->prepare(
-    "SELECT
-    ProductID, ProductName, ProductDescription,
-    ProductPrice, ProductQuantity, CoverURL
+  $stmt = $mysqli->prepare("SELECT
+    Products.ProductID,
+    Products.ProductName,
+    Products.ProductDescription,
+    Products.ProductPrice,
+    Products.ProductQuantity,
+    Products.CoverURL
     FROM Products
-    ORDER BY ProductName ASC"
+    INNER JOIN Carts ON Products.ProductID = Carts.ProductID
+    WHERE Carts.UserID = $_SESSION[id]"
   );
 
   // Execute the SQL statement
-  $generateGrid->execute();
-  $generateGrid->store_result();
+  $stmt->execute();
+  $stmt->store_result();
 
   // Check if the product exists
-  if ($generateGrid->num_rows > 0) {
+  if ($stmt->num_rows > 0) {
     // Reset variables
     $ProductName = $ProductDescription = $CoverURL = "";
     $ProductID = $ProductPrice = $ProductQuantity = 0;
 
     // Bind the result to variables
-    $generateGrid->bind_result(
+    $stmt->bind_result(
       $ProductID, $ProductName, $ProductDescription,
-      $ProductPrice, $ProductQuantity, $CoverURL
-    );
+      $ProductPrice, $ProductQuantity, $CoverURL);
 
     // Fetch the result
-    while($generateGrid->fetch()) {
+    while($stmt->fetch()) {
       // Generate grid game
-      include (__DIR__ . "/../../page-elements/grid/grid-game.php");
+      include __DIR__ . "/../../page-elements/cart/cart-game.php";
     }
   }
 
   else {
-    echo "Product not found!";
+    echo "Cart is empty!";
   }
 
   // Close the connection
-  $generateGrid->close();
+  $stmt->close();
   $mysqli->close();

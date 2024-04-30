@@ -1,25 +1,24 @@
 <!doctype html>
 
-<!-- Loads the html header -->
+<!-- Load the html header -->
 <?php
-  require_once __DIR__ . "/../page-elements/html-head.php";
+  require __DIR__ . "/../page-elements/html-head.php";
 ?>
 
 <body>
-
-  <!-- Displays the header -->
+  <!-- Display the header -->
   <?php
-  require_once __DIR__ . "/../page-elements/header/header.php";
+    require __DIR__ . "/../page-elements/header/header.php";
   ?>
 
   CART
 
+  <!-- Display all games in user's cart -->
   <div class="cart-game-container-container">
     <?php
-    require_once __DIR__ . "/../page-elements/cart/generate-cart.php";
+      require __DIR__ . "/../sql/cart/generate-cart.php";
     ?>
   </div>
-
 </body>
 
 </html>
