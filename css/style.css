@@ -180,7 +180,7 @@ a:hover {
   flex: 1;
   flex-wrap: wrap;
 
-  justify-content: space-around;
+  justify-content: space-between;
 
   gap: 12px;
   row-gap: 40px;
@@ -259,7 +259,7 @@ a:hover {
   flex: 1;
   flex-wrap: wrap;
 
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
 
   gap: 12px;

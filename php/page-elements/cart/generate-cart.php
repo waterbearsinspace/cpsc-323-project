@@ -37,7 +37,7 @@
         } 
     }  
     
-    else { echo "Product not found!"; }
+    else { echo "Cart is empty!"; }
 
         
     // Close the connection 
