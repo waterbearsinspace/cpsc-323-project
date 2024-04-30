@@ -7,13 +7,19 @@
 
 <body>
 
-    <!-- Displays the header -->
-    <?php
-    require_once __DIR__ . "/../page-elements/header/header.php";
-    ?>
+  <!-- Displays the header -->
+  <?php
+  require_once __DIR__ . "/../page-elements/header/header.php";
+  ?>
 
-    This is the cart.
-    
+  CART
+
+  <div class="cart-game-container-container">
+    <?php
+    require_once __DIR__ . "/../page-elements/cart/generate-cart.php";
+    ?>
+  </div>
+
 </body>
 
 </html>

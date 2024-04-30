@@ -33,6 +33,7 @@
 
   <br />
 
+  
     <?php
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       include (__DIR__ . "/../page-elements/game/add-to-cart-button.php");

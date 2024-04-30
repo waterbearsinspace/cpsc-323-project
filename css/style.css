@@ -278,3 +278,73 @@ a:hover {
   width: 30em;
   height: 30em;
 }
+
+/* CART GAME STYLES */
+.cart-game-container-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cart-game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7e7e7e;
+}
+
+.cart-game-cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15em;
+  height: 15em;
+}
+
+.cart-game-cover {
+  object-fit:contain;
+  overflow:hidden;
+  
+  width: 14em;
+  height: 14em;
+  
+  filter: grayscale(75%);
+
+  transition: all .25s ease;
+}
+
+.cart-game-cover:hover {
+
+  width: 15em;
+  height: 15em;
+  
+  filter: grayscale(0%);
+}
+
+.cart-purchase-info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  width: 100%;
+}
+
+.cart-game-name {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cart-game-name:hover {
+  color: #282bd6;
+}
+
+.cart-price {
+  display: flex;
+  text-transform: uppercase;
+}
