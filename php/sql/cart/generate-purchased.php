@@ -39,7 +39,7 @@
     // Fetch the result
     while($generateCart->fetch()) {
       // Generate cart game
-      include __DIR__ . "/../../page-elements/cart/cart-game.php";
+      include __DIR__ . "/../../page-elements/cart/purchased-game.php";
     }
   }
 

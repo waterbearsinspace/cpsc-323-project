@@ -343,3 +343,8 @@ a:hover {
 .delete-button-image:hover {
   filter: brightness(100%);
 }
+
+.purchase-button-container{
+  display: flex;
+  justify-content: flex-end;
+}

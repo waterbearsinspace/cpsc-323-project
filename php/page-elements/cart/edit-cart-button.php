@@ -1,4 +1,4 @@
-<form action="/cpsc-332-project/php/pages/update-cart-quantity.php" method="post">
+<form action="/cpsc-332-project/php/sql/cart/update-cart-quantity.php" method="post">
   <input type="hidden" name="UserID"
     name="UserID" value=<?= $_SESSION['id'] ?>
   >

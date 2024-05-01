@@ -9,20 +9,15 @@
     <img class="cart-game-cover" src=<?= $CoverURL ?>>
   </div>
 
-  <a href=<?= $GameURL ?> class="cart-game-name">
+  <a href=<?= $GameURL ?> class="purchased-game-name">
     <?= $ProductName ?>
   </a>
 
-  <div class="cart-price">
+  <div class="purchased-price">
     $<?= $ProductPrice ?>
   </div>
 
-
-  <?php
-    include __DIR__ . "/../cart/edit-cart-button.php";
-  ?>
-
-  <?php
-    include __DIR__ . "/../cart/delete-from-cart-button.php";
-  ?>
+  <div class="purchased-quantity">
+    <?= $PurchaseQuantity ?>
+  </div>
 </div>
