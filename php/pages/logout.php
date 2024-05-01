@@ -12,7 +12,7 @@
       require __DIR__ . "/../sql/user-account/logout.php";
     ?>
 
-    <!-- Displays the header -->
+    <!-- Load header handler -->
     <?php
       require __DIR__ . "/../page-elements/header/header.php";
     ?>

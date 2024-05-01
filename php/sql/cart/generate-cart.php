@@ -41,6 +41,9 @@
       // Generate cart game
       include __DIR__ . "/../../page-elements/cart/cart-game.php";
     }
+
+    // Add purchase button
+    require __DIR__ . "/../../page-elements/cart/purchase-button.php";
   }
 
   else {

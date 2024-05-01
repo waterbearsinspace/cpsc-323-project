@@ -12,14 +12,15 @@
       require __DIR__ . "/php/page-elements/header/header.php";
     ?>
 
-    <div class="games-title">GAMES</div>
-    </div>
-
-    <!-- Load footer -->
-    <?php
-      require __DIR__ . "/php/page-elements/header/footer.php";
-    ?>
+    <!-- Load banner -->
+    <?php require __DIR__ . "/php/page-elements/banner/banner.php";?>
   </div>
+
+  <!-- Load footer -->
+  <?php
+    require __DIR__ . "/php/page-elements/header/footer.php";
+  ?>
+
 </body>
 
 </html>

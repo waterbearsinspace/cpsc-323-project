@@ -21,17 +21,14 @@
       <?php
         require __DIR__ . "/../sql/cart/generate-cart.php";
       ?>
-
-      <?php
-        require __DIR__ . "/../page-elements/cart/purchase-button.php";
-      ?>
     </div>
+
   </div>
 
   <!-- Load footer -->
   <?php
-    require __DIR__ . "/../page-elements/header/footer.php";
-  ?>
+      require __DIR__ . "/../page-elements/header/footer.php";
+    ?>
 </body>
 
 </html>

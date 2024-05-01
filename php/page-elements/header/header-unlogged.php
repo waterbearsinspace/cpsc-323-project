@@ -18,6 +18,6 @@
 </header>
 
 <hr style="
-  margin-bottom: 24px;
-  width: 100%;
+  margin-left: calc(var(--side-margin) * -1);
+  margin-right: calc(var(--side-margin) * -1);"
 />

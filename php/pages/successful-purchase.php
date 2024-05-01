@@ -28,10 +28,10 @@
     </div>
   </div>
 
-    <!-- Load footer -->
-    <?php
-      require __DIR__ . "/../page-elements/header/footer.php";
-    ?>
+  <!-- Load footer -->
+  <?php
+    require __DIR__ . "/../page-elements/header/footer.php";
+  ?>
 </body>
 
 </html>

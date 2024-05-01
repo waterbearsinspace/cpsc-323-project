@@ -24,7 +24,5 @@
 
 <hr style="
   margin-left: calc(var(--side-margin) * -1);
-  margin-right: calc(var(--side-margin) * -1);
-  margin-bottom: 24px;
-  width: 100%;
+  margin-right: calc(var(--side-margin) * -1);"
 />

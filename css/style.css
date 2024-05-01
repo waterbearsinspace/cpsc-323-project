@@ -19,11 +19,17 @@ html, a {
 
 html, body {
   height: 99%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
+}
+
+.content-wrap {
+  flex: 1 0 auto;
 }
 
 html {
@@ -66,10 +72,6 @@ a:hover {
   border-width: 1px;
   line-height: 2em;
   text-align: center;
-}
-
-.content-wrap {
-  flex: 1 0 auto;
 }
 
 .header-container {
@@ -127,6 +129,77 @@ a:hover {
   text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+/* BANNER STYLES */
+.banner-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #7e7e7e;
+}
+
+.banner-video-container {
+  align-items: center;
+  background-color: #7e7e7e;
+  display: flex;
+  height: 70vh;
+  margin: auto calc(var(--side-margin) * -1) 0;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.banner-video {
+  width: 100%;
+}
+
+.banner-display-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  top: -50vh;
+  margin: 0 0 -50vh;
+  z-index: 100;
+}
+
+.banner-text, .banner-text-two {
+  color: rgb(255, 255, 255);
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 2em;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.banner-text-two {
+  font-size: 1.5em;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.all-games-button {
+  align-items: center;
+  background-color: #00000000;
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 2em;
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.all-games-button:hover {
+  background-color: #ffffff;
+  border-color:  #ffffff;
+  color: #282bd6;
 }
 
 /* FORM STYLES */
@@ -456,7 +529,8 @@ a:hover {
 /* FOOTER STYLES */
 
 .footer {
-  margin: 2em calc(var(--side-margin) * -1) 0;
+  flex-shrink: 0;
+  margin: auto calc(var(--side-margin) * -1) 0;
 }
 
 .footer-member, .footer-project-name {
