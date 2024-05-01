@@ -1,4 +1,4 @@
-<form action="/cpsc-332-project/php/pages/update-cart.php" method="post">
+<form action="/cpsc-332-project/php/pages/update-cart-quantity.php" method="post">
   <input type="hidden" name="UserID"
     name="UserID" value=<?= $_SESSION['id'] ?>
   >
@@ -9,7 +9,7 @@
 
   <input class="numberInput" type="number" name="PurchaseQuantity"
     name="PurchaseQuantity" min="1" max=<?= $ProductQuantity ?>
-    value="1"
+    value=<?= $PurchaseQuantity ?>
   >
 
   <input class="form-button cart-qty-button" type="submit" name="update-cart"

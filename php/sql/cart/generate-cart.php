@@ -14,7 +14,8 @@
     Products.ProductDescription,
     Products.ProductPrice,
     Products.ProductQuantity,
-    Products.CoverURL
+    Products.CoverURL,
+    Carts.PurchaseQuantity
     FROM Products
     INNER JOIN Carts ON Products.ProductID = Carts.ProductID
     WHERE Carts.UserID = $_SESSION[id]
@@ -29,12 +30,12 @@
   if ($stmt->num_rows > 0) {
     // Reset variables
     $ProductName = $ProductDescription = $CoverURL = "";
-    $ProductID = $ProductPrice = $ProductQuantity = 0;
+    $ProductID = $ProductPrice = $ProductQuantity = $PurchaseQuantity = 0;
 
     // Bind the result to variables
     $stmt->bind_result(
       $ProductID, $ProductName, $ProductDescription,
-      $ProductPrice, $ProductQuantity, $CoverURL);
+      $ProductPrice, $ProductQuantity, $CoverURL, $PurchaseQuantity);
 
     // Fetch the result
     while($stmt->fetch()) {

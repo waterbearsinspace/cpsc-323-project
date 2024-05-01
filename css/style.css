@@ -277,9 +277,9 @@ a:hover {
 }
 
 .cart-game-container {
+  align-items: center;
   height: auto;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
@@ -297,11 +297,11 @@ a:hover {
 
 .cart-game-name {
   font-weight: bold;
-  width: 45em;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
+  width: 45em;
 }
 
 .cart-game-name:hover {
@@ -314,8 +314,8 @@ a:hover {
 }
 
 .cart-qty-button {
-  margin: 0, 16px, 0;
   margin-bottom: 2px;
+  margin: 0, 16px, 0;
   vertical-align: middle;
 }
 

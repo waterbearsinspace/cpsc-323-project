@@ -17,6 +17,7 @@
     $<?= $ProductPrice ?>
   </div>
 
+
   <?php
     include __DIR__ . "/../game/edit-cart-button.php";
   ?>
