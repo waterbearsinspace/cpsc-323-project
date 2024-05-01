@@ -17,6 +17,15 @@ html, a {
   color: #000000;
 }
 
+html, body {
+  height: 99%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 html {
   background-color: #ffffff;
   font-family: sans-serif;
@@ -59,9 +68,14 @@ a:hover {
   text-align: center;
 }
 
+.content-wrap {
+  flex: 1 0 auto;
+}
+
 .header-container {
   margin-bottom: 20px;
   margin-top: 20px;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -116,7 +130,7 @@ a:hover {
 }
 
 /* FORM STYLES */
-.user-form, .form-content {
+.form-container, .user-form, .form-content {
   display: flex;
   justify-content: center;
 }
@@ -128,7 +142,7 @@ a:hover {
 .user-form {
   align-items: center;
   gap: 12px;
-  height: 80vh;
+  margin-top: 128px;
 }
 
 .form-content {
@@ -141,7 +155,7 @@ a:hover {
   font-weight: bold;
   gap: 20px;
   height: 200px;
-  padding: 150px;
+  padding: 125px;
   width: 200px;
 }
 
@@ -443,7 +457,6 @@ a:hover {
 
 .footer {
   margin: 2em calc(var(--side-margin) * -1) 0;
-
 }
 
 .footer-member, .footer-project-name {

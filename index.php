@@ -6,27 +6,20 @@
 ?>
 
 <body>
-  <!-- Load header handler -->
-  <?php
-    require __DIR__ . "/php/page-elements/header/header.php";
-  ?>
-
-  <div class="games-title">GAMES</div>
-
-  <hr style="width:100%"/>
-
-  <!-- Generate grid of games -->
-  <div class="grid-game-container-container">
+  <div class="content-wrap">
+    <!-- Load header handler -->
     <?php
-      require __DIR__ . "/php/sql/game/generate-grid.php";
+      require __DIR__ . "/php/page-elements/header/header.php";
+    ?>
+
+    <div class="games-title">GAMES</div>
+    </div>
+
+    <!-- Load footer -->
+    <?php
+      require __DIR__ . "/php/page-elements/header/footer.php";
     ?>
   </div>
-
-
-  <!-- Load footer -->
-  <?php
-    require __DIR__ . "/php/page-elements/header/footer.php";
-  ?>
 </body>
 
 </html>
