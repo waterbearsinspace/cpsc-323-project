@@ -15,9 +15,9 @@ To correctly set up the local server for development, perform the following step
         - Alternatively, edit line 8 of /htdocs/index.php to point to /cpsc-332-project/ instead of /dashboard/
     3. Copy the data inside of the /.OVERWRITE/ folder and paste it into /mysql/, overwriting the old files if any
 
-At this point, we are ready to begin! 
+At this point, we are ready to begin!
 
-To test the server, simply open the XAMPP Control Panel and start the Apache and MySQL services. The application can be accessed via localhost in a web browser.
+To test the server, open the XAMPP Control Panel and start the Apache and MySQL services. The application can be accessed via localhost in a web browser.
 
 # Notes
 - Project files stored in /xampp/htdocs/cpsc-332-project/
