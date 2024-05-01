@@ -25,6 +25,8 @@
       <?= $ProductName ?>
     </div>
 
+    <hr style="width:100%"/>
+
     <div class="page-game-cover-container">
       <img class="page-game-cover" src=<?= $CoverURL ?>>
     </div>

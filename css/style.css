@@ -3,7 +3,16 @@
   --side-margin: 22em;
 }
 
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/cpsc-332-project/fonts/SF-Pro.ttf');
+}
+
 /* HTML STYLES */
+* {
+  font-family: 'SF Pro Text';
+}
+
 html, a {
   color: #000000;
 }
@@ -242,6 +251,12 @@ a:hover {
   width: 100%;
 }
 
+.page-game-name {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .page-game-cover {
   height: 30em;
   object-fit: contain;
@@ -256,15 +271,16 @@ a:hover {
 
 /* CART GAME STYLES */
 .cart-game-container-container, .cart-game-container,
-.cart-game-cover-container {
+.cart-game-cover-container, .cart-game-info-container {
   display: flex;
 }
 
-.cart-game-container, .cart-game-cover-container {
+.cart-game-container, .cart-game-cover-container,
+.cart-game-info-container {
   align-items: center;
 }
 
-.cart-title {
+.cart-title, .thank-you {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
@@ -277,7 +293,6 @@ a:hover {
 }
 
 .cart-game-container {
-  align-items: center;
   height: auto;
   justify-content: space-between;
   width: 100%;
@@ -291,17 +306,22 @@ a:hover {
   height: 8em;
   object-fit:contain;
   overflow:hidden;
-  transition: all .25s ease;
   width: 8em;
+}
+
+.cart-game-info-container {
+  padding-left: 1em;
+  width: 100%;
 }
 
 .cart-game-name {
   font-weight: bold;
+  justify-self: flex-start;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
-  width: 45em;
+  width: 55%;
 }
 
 .cart-game-name:hover {
@@ -317,6 +337,12 @@ a:hover {
   margin-bottom: 2px;
   margin: 0, 16px, 0;
   vertical-align: middle;
+}
+
+.cart-price, .edit-cart-button-container,
+.delete-button-container {
+  text-align: end;
+  width: 15%;
 }
 
 .numberInput {
@@ -347,4 +373,68 @@ a:hover {
 .purchase-button-container{
   display: flex;
   justify-content: flex-end;
+}
+
+/* PURCHASED GAME STYLES */
+.purchased-game-container-container, .purchased-game-container,
+.purchased-game-cover-container, .purchased-game-info-container {
+  display: flex;
+}
+
+.purchased-game-container, .purchased-game-cover-container,
+.purchased-game-info-container {
+  align-items: center;
+}
+
+.purchased-title, .thank-you {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.purchased-game-container-container {
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+
+.purchased-game-container {
+  height: auto;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.purchased-game-cover-container {
+  justify-content: center;
+}
+
+.purchased-game-cover {
+  height: 8em;
+  object-fit:contain;
+  overflow:hidden;
+  width: 8em;
+}
+
+.purchased-game-info-container {
+  padding-left: 1em;
+  width: 100%;
+}
+
+.purchased-game-name {
+  font-weight: bold;
+  justify-self: flex-start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 70%;
+}
+
+.purchased-game-name:hover {
+  color: #282bd6;
+}
+
+.purchased-price, .purchased-quantity {
+  text-align: end;
+  width: 15%;
 }

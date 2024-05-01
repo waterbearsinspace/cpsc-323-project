@@ -1,28 +1,30 @@
 <!doctype html>
 
-<!-- Loads the html header -->
+<!-- Load the html header -->
 <?php
   require __DIR__ . "/../page-elements/html-head.php";
 ?>
 
 <body>
-  <!-- Displays the header -->
+  <!-- Display the header -->
   <?php
     require __DIR__ . "/../page-elements/header/header.php";
   ?>
 
-  Thank you for your purchase!
+  <div class="thank-you">THANK YOU FOR YOUR PURCHASE OF THE FOLLOWING:</div>
 
-  <?php
+  <hr style="width:100%"/>
+
+  <!-- Display all games in user's cart -->
+  <div class="cart-game-container-container">
+    <?php
       require __DIR__ . "/../sql/cart/generate-purchased.php";
-  ?>
+    ?>
 
-  <?php
-    require __DIR__ . "/../sql/cart/purchase.php";
-
-  ?>
-
-
+    <?php
+      require __DIR__ . "/../sql/cart/purchase.php";
+    ?>
+  </div>
 </body>
 
 </html>

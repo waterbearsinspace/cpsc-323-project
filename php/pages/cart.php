@@ -21,11 +21,12 @@
       require __DIR__ . "/../sql/cart/generate-cart.php";
     ?>
 
-    <!-- Purchase button -->
     <?php
-      include __DIR__ . "/../page-elements/cart/purchase-button.php";
+      require __DIR__ . "/../page-elements/cart/purchase-button.php";
     ?>
   </div>
+
+  <!-- Purchase button -->
 
 </body>
 
