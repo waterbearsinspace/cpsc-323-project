@@ -438,3 +438,39 @@ a:hover {
   text-align: end;
   width: 15%;
 }
+
+/* FOOTER STYLES */
+
+.footer {
+  margin: 2em calc(var(--side-margin) * -1) 0;
+
+}
+
+.footer-member, .footer-project-name {
+  font-size: .75em;
+  font-weight: bold;
+  line-height: 5.25em;
+  text-transform: uppercase;
+}
+
+.footer-container, .footer-member-container,
+.footer-info-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 .75em 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-member-container {
+  gap: 4em;
+}
+
+.footer-info-container {
+  gap: 1.5em;
+}
+
+.github-logo {
+  width: 1em;
+  height: auto;
+}

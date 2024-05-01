@@ -21,6 +21,12 @@
       require __DIR__ . "/php/sql/game/generate-grid.php";
     ?>
   </div>
+
+
+  <!-- Load footer -->
+  <?php
+    require __DIR__ . "/php/page-elements/header/footer.php";
+  ?>
 </body>
 
 </html>
