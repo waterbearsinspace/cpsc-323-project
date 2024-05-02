@@ -1,12 +1,7 @@
 <?php
   if (isset($_POST['update-cart'])) {
-    // Connect to the database
-    $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
-
-    // Check for errors
-    if ($mysqli->connect_error) {
-      die("Connection failed: " . $mysqli->connect_error);
-    }
+    // Connect to database
+    require __DIR__ . "/../conn.php";
 
     // Get the form data
     $UserID = $_POST['UserID'];
@@ -36,5 +31,7 @@
     header("Location: /cpsc-332-project/php/pages/cart.php");
 
     // Close the connection
+    $updateCart->close();
+    $deleteZeroQuantity->close();
     $mysqli->close();
   }

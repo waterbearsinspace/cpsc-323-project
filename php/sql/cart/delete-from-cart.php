@@ -1,7 +1,7 @@
 <?php
   if (isset($_POST['delete-from-cart'])) {
-    // Connect to the database
-    $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
+    // Connect to database
+    require __DIR__ . "/../conn.php";
 
     // Check for errors
     if ($mysqli->connect_error) {
@@ -27,5 +27,6 @@
     header("Location: /cpsc-332-project/php/pages/cart.php");
 
     // Close the connection
+    $deleteFromCart->close();
     $mysqli->close();
   }

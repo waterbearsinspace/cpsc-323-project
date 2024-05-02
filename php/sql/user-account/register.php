@@ -2,13 +2,8 @@
   // Source: sitepoint.com
 
   if (isset($_POST["register"])) {
-    // Connect to the database
-    $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
-
-    // Check for errors
-    if ($mysqli->connect_error) {
-      die("Connection failed: " . $mysqli->connect_error);
-    }
+    // Connect to database
+    require_once __DIR__ . "/../conn.php";
 
     // Prepare and bind the SQL statement
     $register = $mysqli->prepare(

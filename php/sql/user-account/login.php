@@ -2,13 +2,8 @@
   // Source: sitepoint.com
 
   if (isset($_POST['login'])) {
-    // Connect to the database
-    $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
-
-    // Check for errors
-    if ($mysqli->connect_error) {
-      die("Connection failed: " . $mysqli->connect_error);
-    }
+    // Connect to database
+    require __DIR__ . "/../conn.php";
 
     // Prepare and bind the SQL statement
     $login = $mysqli->prepare(

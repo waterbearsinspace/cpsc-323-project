@@ -1,14 +1,9 @@
 <?php
-  // Connect to the database
-  $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
-
-  // Check for errors
-  if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-  }
+  // Connect to database
+  require __DIR__ . "/../conn.php";
 
   // Prepare the SQL statement
-  $generateCart = $mysqli->prepare("SELECT
+  $generatePurchased = $mysqli->prepare("SELECT
     Products.ProductID,
     Products.ProductName,
     Products.ProductPrice,
@@ -22,22 +17,22 @@
   );
 
   // Execute the SQL statement
-  $generateCart->execute();
-  $generateCart->store_result();
+  $generatePurchased->execute();
+  $generatePurchased->store_result();
 
   // Check if the product exists
-  if ($generateCart->num_rows > 0) {
+  if ($generatePurchased->num_rows > 0) {
     // Reset variables
     $ProductName = $CoverURL = "";
     $ProductID = $ProductPrice = $ProductQuantity = $PurchaseQuantity = 0;
 
     // Bind the result to variables
-    $generateCart->bind_result(
+    $generatePurchased->bind_result(
       $ProductID, $ProductName, $ProductPrice,
       $ProductQuantity, $CoverURL, $PurchaseQuantity);
 
     // Fetch the result
-    while($generateCart->fetch()) {
+    while($generatePurchased->fetch()) {
       // Generate cart game
       include __DIR__ . "/../../page-elements/cart/purchased-game.php";
     }
@@ -48,5 +43,5 @@
   }
 
   // Close the connection
-  $generateCart->close();
+  $generatePurchased->close();
   $mysqli->close();

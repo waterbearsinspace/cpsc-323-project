@@ -1,14 +1,9 @@
 <?php
-  // Connect to the database
-  $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
-
-  // Check for errors
-  if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-  }
+    // Connect to database
+    require __DIR__ . "/../conn.php";
 
   // Prepare and bind the SQL statement
-  $stmt = $mysqli->prepare(
+  $fetchGameData = $mysqli->prepare(
     "SELECT
     ProductName, ProductDescription, ProductPrice,
     ProductQuantity, CoverURL,
@@ -17,24 +12,28 @@
     WHERE ProductID = ?"
   );
 
-  $stmt->bind_param("i", $ProductID);
+  $fetchGameData->bind_param("i", $ProductID);
 
   // Execute the SQL statement
-  $stmt->execute();
-  $stmt->store_result();
+  $fetchGameData->execute();
+  $fetchGameData->store_result();
 
   // Check if the product exists
-  if ($stmt->num_rows > 0) {
+  if ($fetchGameData->num_rows > 0) {
     // Bind the result to variables
-    $stmt->bind_result(
+    $fetchGameData->bind_result(
       $ProductName, $ProductDescription,
       $ProductPrice, $ProductQuantity, $CoverURL,
       $MinPlayers, $MaxPlayers, $PlayType);
 
     // Fetch the result
-    $stmt->fetch();
+    $fetchGameData->fetch();
   }
 
   else {
     echo "Product not found!";
   }
+
+  // Close the connection
+  $fetchGameData->close();
+  $mysqli->close();
