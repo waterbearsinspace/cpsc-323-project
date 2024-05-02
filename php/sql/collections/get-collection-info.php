@@ -7,7 +7,7 @@
     $getCollectionInfo = $mysqli->prepare(
         "SELECT
         CollectionName, CollectionDescription
-        FROM Collections
+        FROM collection_info
         WHERE CollectionID = ?"
     );
 

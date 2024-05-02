@@ -24,8 +24,8 @@
       Products.ProductQuantity,
       Products.CoverURL,
       FROM Products
-      INNER JOIN Collections ON Products.ProductID = Collections.ProductID
-      WHERE Collections.CollectionID = ?
+      INNER JOIN collection_products ON collection_products.ProductID = Collections.ProductID
+      WHERE collection_products.CollectionID = ?
       ORDER BY ProductName ASC"
     );
       
