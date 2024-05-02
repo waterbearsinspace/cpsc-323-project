@@ -17,7 +17,24 @@
         ProductPrice, ProductQuantity, CoverURL
         FROM Products
         ORDER BY ProductName ASC"
-      );
+      );    
+    }
+    
+    else {
+      $generateGrid = $mysqli->
+  $generateCart = $mysqli->prepare("SELECT
+      Products.ProductID,
+      Products.ProductName,
+      Products.ProductPrice,
+      Products.ProductQuantity,
+      Products.CoverURL,
+      FROM Products
+      INNER JOIN Collections ON Products.ProductID = Collections.ProductID
+      WHERE Collections.CollectionID = ?
+      ORDER BY ProductName ASC"
+    );
+      
+      $generateGrid->bind_param("s", $CollectionID);
     }
 
   // Execute the SQL statement

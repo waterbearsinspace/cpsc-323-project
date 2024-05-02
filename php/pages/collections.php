@@ -21,7 +21,7 @@
       require __DIR__ . "/../sql/collections/get-collection-info.php";
     ?>
 
-    <div class="games-title">ALL GAMES</div>
+    <div class="games-title"><?= $CollectionID ?></?=></div>
 
     <hr style="width:100%"/>
 

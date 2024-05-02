@@ -17,7 +17,7 @@
         WHERE CollectionID = ?"
     );
 
-    $stmt->bind_param("i", $ProductID);
+    $stmt->bind_param("i", $CollectionID);
     
     // Execute the SQL statement
     $stmt->execute();
