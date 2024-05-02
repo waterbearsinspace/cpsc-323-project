@@ -408,7 +408,7 @@ a:hover {
   text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
-  width: 55%;
+  width: 40%;
 }
 
 .cart-game-name:hover {
@@ -429,7 +429,7 @@ a:hover {
 .cart-price, .edit-cart-button-container,
 .delete-button-container {
   text-align: end;
-  width: 15%;
+  width: 20%;
 }
 
 .numberInput {
