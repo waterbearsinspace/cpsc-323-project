@@ -10,13 +10,15 @@
   }
 
   // Prepare the SQL statement
-  $generateGrid = $mysqli->prepare(
-    "SELECT
-    ProductID, ProductName, ProductDescription,
-    ProductPrice, ProductQuantity, CoverURL
-    FROM Products
-    ORDER BY ProductName ASC"
-  );
+    if($CollectionID="all-games") {
+      $generateGrid = $mysqli->prepare(
+        "SELECT
+        ProductID, ProductName, ProductDescription,
+        ProductPrice, ProductQuantity, CoverURL
+        FROM Products
+        ORDER BY ProductName ASC"
+      );
+    }
 
   // Execute the SQL statement
   $generateGrid->execute();

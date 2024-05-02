@@ -16,8 +16,7 @@
     </p>
       <br><br>
     <div class="all-games-button-container">
-      <!-- <a href = "/cpsc-332-project/php/pages/collection.php?ID=all-games" -->
-      <a href = "/cpsc-332-project/php/pages/all-games.php"
+      <a href = "/cpsc-332-project/php/pages/collections.php?ID=all-games"
         class = "all-games-button">
         BROWSE ALL GAMES
       </a>

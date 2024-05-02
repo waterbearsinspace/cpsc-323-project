@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <a href="/cpsc-332-project/php/pages/all-games.php" class="navbar-link">
+  <a href="/cpsc-332-project/php/pages/collections.php?ID=all-games" class="navbar-link">
     ALL GAMES
   </a>
 </nav>

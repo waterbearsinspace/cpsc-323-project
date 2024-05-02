@@ -1,3 +1,7 @@
+<?php
+  $CollectionID = $_GET['ID'];
+?>
+
 <!doctype html>
 
 <!-- Load the html header -->
@@ -13,6 +17,9 @@
     ?>
 
     <!-- Get collection info -->
+    <?php
+      require __DIR__ . "/../sql/collections/get-collection-info.php";
+    ?>
 
     <div class="games-title">ALL GAMES</div>
 
