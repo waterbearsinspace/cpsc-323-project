@@ -276,16 +276,22 @@ a:hover {
 }
 
 /* GRID GAME STYLES */
-.grid-game-container-container, .grid-game-container,
+.grid-game-container,
 .grid-game-cover-container, .grid-purchase-info-container {
   display: flex;
+}
+
+.grid-game-container-container {
+  display: grid;
+  width: 104.5%;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .grid-game-container, .grid-game-cover-container {
   width: 15em;
 }
 
-.grid-game-container-container, .grid-purchase-info-container  {
+.grid-purchase-info-container  {
   justify-content: space-evenly;
 }
 

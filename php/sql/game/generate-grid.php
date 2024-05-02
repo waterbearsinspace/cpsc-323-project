@@ -1,3 +1,5 @@
+<div class="grid-game-container-container">
+
 <?php
   // Connect to the database
   $mysqli = new mysqli("localhost", "root", "", "cpsc_332_project");
@@ -46,3 +48,6 @@
   // Close the connection
   $generateGrid->close();
   $mysqli->close();
+?>
+
+</div>
