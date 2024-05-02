@@ -3,7 +3,7 @@
 
   if (isset($_POST["register"])) {
     // Connect to database
-    require_once __DIR__ . "/../conn.php";
+    require __DIR__ . "/../conn.php";
 
     // Prepare and bind the SQL statement
     $register = $mysqli->prepare(
