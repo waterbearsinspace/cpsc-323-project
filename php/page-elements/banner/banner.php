@@ -18,7 +18,7 @@
     <div class="all-games-button-container">
       <a href = "/cpsc-332-project/php/pages/collections/all-games.php"
         class = "all-games-button">
-        VIEW ALL GAMES
+        BROWSE ALL GAMES
       </a>
     </div>
   </div>

@@ -145,7 +145,7 @@ a:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 35px;
+  height: 40px;
   justify-content: center;
 }
 
@@ -267,6 +267,7 @@ a:hover {
   line-height: 2em;
   text-align: center;
   width: auto;
+  padding: 1px 8px 1px;
 }
 
 .form-button:hover {
@@ -285,7 +286,7 @@ a:hover {
 }
 
 .grid-game-container-container, .grid-purchase-info-container  {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .games-title {
@@ -347,27 +348,17 @@ a:hover {
 }
 
 /* PAGE GAME STYLES */
-.page-game-container-container, .page-game-cover-container {
+.page-game-container, .page-game-cover-container,
+.page-game-info-container, .page-game-more-info-line {
   display: flex;
-}
-
-.page-game-container-container {
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: space-between;
+  flex: 1;
 }
 
 .page-game-cover-container {
   height: auto;
   justify-content: center;
   width: 100%;
-}
-
-.page-game-name {
-  font-size: 2em;
-  font-weight: bold;
-  text-transform: uppercase;
+  flex-grow: 1;
 }
 
 .page-game-cover {
@@ -375,6 +366,46 @@ a:hover {
   object-fit: contain;
   overflow: hidden;
   width: 30em;
+}
+
+.page-game-name, .page-game-price {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-game-info-container {
+  flex-direction: column;
+}
+
+.page-game-container {
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.page-game-name {
+  font-size: 2em;
+}
+
+.page-game-price, .page-game-quantity,
+.page-game-purchase-button,
+.page-game-more-info-container {
+  margin-bottom: 1em;
+}
+
+.page-game-price{
+  font-size: 1.75em;
+}
+
+.page-game-quantity {
+  font-size: 1em;
+}
+
+.page-game-more-info-attribute {
+  width: 15%;
+}
+
+.page-game-more-info-value {
+  color: #7e7e7e;
 }
 
 .please {

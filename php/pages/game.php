@@ -21,40 +21,67 @@
       $ProductDescription = str_replace("\n", '<br>', $ProductDescription);
     ?>
 
-    <div class="page-game-container-container">
-      <div class="page-game-name">
-        <?= $ProductName ?>
-      </div>
-
-      <hr style="width:100%"/>
-
+    <div class="page-game-container">
       <div class="page-game-cover-container">
         <img class="page-game-cover" src=<?= $CoverURL ?>>
       </div>
 
-      <div class="page-game-description">
-        <?= $ProductDescription ?>
-      </div>
+      <div class="page-game-info-container">
+        <div class="page-game-name">
+          <?= $ProductName ?>
+        </div>
 
-      <div class="page-game-price">
-        $<?= $ProductPrice ?>
-      </div>
+        <hr style="width:100%; margin-bottom: 1em;"/>
 
-      <div class="page-game-quantity">
-        Amount in Stock: <?= $ProductQuantity ?>
+        <div class="page-game-price">
+          $<?= $ProductPrice ?>
+        </div>
+
+        <div class="page-game-quantity">
+          Amount in Stock: <?= $ProductQuantity ?>
+        </div>
+
+        <div class="page-game-purchase-button">
+          <?php
+            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+              include __DIR__ . "/../page-elements/game/add-to-cart-button.php";
+            }
+            else {
+              include __DIR__ . "/../page-elements/game/please-log-in.php";
+            }
+          ?>
+        </div>
+
+        <hr style="width:100%; margin-bottom: 1em;"/>
+
+        <div class="page-game-more-info-container">
+          <div class="page-game-more-info-line">
+            <div class="page-game-more-info-attribute">
+              Players
+            </div>
+            <div class="page-game-more-info-value">
+              <?= $MinPlayers ?> - <?= $MaxPlayers ?>
+            </div>
+          </div>
+
+          <div class="page-game-more-info-line">
+            <div class="page-game-more-info-attribute">
+              Play Type
+            </div>
+            <div class="page-game-more-info-value">
+              <?= $PlayType ?>
+            </div>
+          </div>
+        </div>
+        <hr style="width:100%; margin-bottom: 1em;"/>
+
+        <div class="page-game-description">
+          <?= $ProductDescription ?>
+        </div>
+
+
       </div>
     </div>
-
-    <br />
-
-    <?php
-      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-        include __DIR__ . "/../page-elements/game/add-to-cart-button.php";
-      }
-      else {
-        include __DIR__ . "/../page-elements/game/please-log-in.php";
-      }
-    ?>
   </div>
 
   <!-- Load footer -->
