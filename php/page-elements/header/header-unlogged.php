@@ -19,5 +19,6 @@
 
 <hr style="
   margin-left: calc(var(--side-margin) * -1);
-  margin-right: calc(var(--side-margin) * -1);"
+  margin-right: calc(var(--side-margin) * -1);
+  margin-bottom: 0em"
 />

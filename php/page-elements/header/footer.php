@@ -11,7 +11,7 @@
 
 
     <div class="footer-info-container">
-      <a target="_blank"
+      <a target="_blank" class="github-logo-container"
         href="https://github.com/waterbearsinspace/cpsc-332-project"
       >
         <img class="github-logo" src="/cpsc-332-project/img/github-mark.png">

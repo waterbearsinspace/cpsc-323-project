@@ -1,6 +1,6 @@
 /* GLOBAL DEFINITIONS */
 :root {
-  --side-margin: 22em;
+  --side-margin: 20em;
 }
 
 @font-face {
@@ -19,6 +19,11 @@ html {
 
 html, a {
   color: #000000;
+}
+
+a {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 html, body {
@@ -135,6 +140,23 @@ a:hover {
   white-space: nowrap;
 }
 
+/* NAVIGATION STYLES */
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 35px;
+  justify-content: center;
+}
+
+.navbar-link-container {
+
+}
+
+.navbar-link {
+  font-size: 12px;
+}
+
 /* BANNER STYLES */
 .banner-container{
   display: flex;
@@ -147,7 +169,7 @@ a:hover {
   background-color: #7e7e7e;
   display: flex;
   height: 70vh;
-  margin: auto calc(var(--side-margin) * -1) 0;
+  margin: -16px calc(var(--side-margin) * -1) 0;
   object-fit: contain;
   overflow: hidden;
 }
@@ -536,7 +558,7 @@ a:hover {
   align-items: center;
   flex-shrink: 0;
   height: 71px;
-  margin: auto calc(var(--side-margin) * -1) 0;
+  margin: 16px calc(var(--side-margin) * -1) 0;
   padding: 0;
 }
 
@@ -569,7 +591,17 @@ a:hover {
   gap: 1.5em;
 }
 
-.github-logo {
+.footer-project-name, .github-logo-container {
+  align-items: center;
+}
+
+.github-logo-container {
   width: 1em;
-  height: auto;
+  height: 1em;
+  object-fit: contain;
+}
+
+.github-logo {
+  height: 1em;
+  width: auto;
 }

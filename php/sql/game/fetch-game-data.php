@@ -11,7 +11,8 @@
   $stmt = $mysqli->prepare(
     "SELECT
     ProductName, ProductDescription, ProductPrice,
-    ProductQuantity, CoverURL
+    ProductQuantity, CoverURL,
+    MinPlayers, MaxPlayers, PlayType
     FROM Products
     WHERE ProductID = ?"
   );
@@ -27,7 +28,8 @@
     // Bind the result to variables
     $stmt->bind_result(
       $ProductName, $ProductDescription,
-      $ProductPrice, $ProductQuantity, $CoverURL);
+      $ProductPrice, $ProductQuantity, $CoverURL,
+      $MinPlayers, $MaxPlayers, $PlayType);
 
     // Fetch the result
     $stmt->fetch();

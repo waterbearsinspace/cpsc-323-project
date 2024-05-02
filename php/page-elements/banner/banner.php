@@ -9,11 +9,11 @@
     <div class="banner-text">
       Find your new favorites to bring to the table
     </div>
-    <div class="banner-text-two">
+    <p class="banner-text-two">
       Browse, discover, and purchase hand-curated board games
       <br>
-      you and your gaming group are sure to enjoy.
-    </div>
+      that you and your gaming group are sure to enjoy.
+    </p>
       <br><br>
     <div class="all-games-button-container">
       <a href = "/cpsc-332-project/php/pages/collections/all-games.php"

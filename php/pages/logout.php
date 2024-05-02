@@ -17,7 +17,8 @@
       require __DIR__ . "/../page-elements/header/header.php";
     ?>
 
-    You have been logged out.
+    <div style="margin-top: 16px;">You have been logged out.</div>
+
   </div>
 
   <!-- Load footer -->
