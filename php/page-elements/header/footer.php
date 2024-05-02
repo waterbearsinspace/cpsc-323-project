@@ -1,5 +1,5 @@
 <div class="footer">
-  <hr style="width: 100%" />
+  <hr style="width: 100%; margin: 0;" />
 
   <div class="footer-container">
     <div class ="footer-member-container">

@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'SF Pro Text';
-  src: url('/cpsc-332-project/fonts/SF-Pro.ttf');
+  src: url('/cpsc-332-project/fonts/SF-Pro-Text.ttf');
 }
 
 /* HTML STYLES */
@@ -13,12 +13,16 @@
   font-family: 'SF Pro Text';
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 html, a {
   color: #000000;
 }
 
 html, body {
-  height: 99%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -529,14 +533,16 @@ a:hover {
 /* FOOTER STYLES */
 
 .footer {
+  align-items: center;
   flex-shrink: 0;
+  height: 71px;
   margin: auto calc(var(--side-margin) * -1) 0;
+  padding: 0;
 }
 
 .footer-member, .footer-project-name {
-  font-size: .75em;
-  font-weight: bold;
-  line-height: 5.25em;
+  font-size: 11px;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -547,6 +553,12 @@ a:hover {
   padding: 0 .75em 0;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .footer-member-container {
