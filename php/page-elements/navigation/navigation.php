@@ -4,7 +4,7 @@
   </a>
 
   <div class="navbar-link dropdown">
-    <a href="#" class="dropdown-button">COLLECTIONS</a>
+    <a href="#" class="dropdown-button">COLLECTIONS ▾</a>
       <div class="dropdown-links">
         <?php require __DIR__ . "/../../sql/collections/generate-navbar-links.php"?>
       </div>
