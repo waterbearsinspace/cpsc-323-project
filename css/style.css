@@ -349,6 +349,11 @@ a:hover {
   text-transform: uppercase;
 }
 
+.games-subtitle {
+  margin-top: .25em;
+  font-size: 1em;
+}
+
 .grid-game-container-container {
   flex-wrap: wrap;
   gap: 12px;
@@ -399,6 +404,58 @@ a:hover {
 
 .grid-game-name:hover {
   color: #282bd6;
+}
+
+/* COLLECTION STYLES */
+.collection-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collection-banner-image-container {
+  align-items: center;
+  background-color: #7e7e7e;
+  display: flex;
+  height: 25vh;
+  margin: -16px calc(var(--side-margin) * -1) 0;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.collection-banner-image {
+  width: 100%;
+}
+
+.games-title-container {
+  display: flex;
+  align-items: center;
+  height: 12vh;
+  justify-content: space-between;
+}
+
+.games-title {
+  font-size: 64px;
+}
+
+.games-subtitle {
+  font-size: 26px;
+}
+
+.collection-container {
+  margin-top: 16em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.card-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
 /* PAGE GAME STYLES */

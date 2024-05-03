@@ -14,14 +14,15 @@
     <!-- Load header handler -->
     <?php
       require __DIR__ . "/../page-elements/header/header.php";
-    ?>
 
-    <!-- Get collection info -->
-    <?php
+      require __DIR__ . "/../page-elements/collections/banner.php";
+
       require __DIR__ . "/../sql/collections/get-collection-info.php";
     ?>
-
-    <div class="games-title"><?= $collectionName ?></?=></div>
+    <div class="games-title-container">
+      <div class="games-title"><?= $collectionName ?></div>
+      <div class="games-subtitle"><?= $collectionDescription?></div>
+    </div>
 
     <hr style="width:100%"/>
 
