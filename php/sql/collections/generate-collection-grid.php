@@ -5,6 +5,7 @@
   require __DIR__ . "/../conn.php";
 
   $generateGrid = $mysqli->prepare("SELECT
+    CollectionID,
     CollectionName,
     CollectionDescription
     FROM collection_info
@@ -19,11 +20,13 @@
   // Check if the game exists
   if ($generateGrid->num_rows > 0) {
     // Reset variables
+    $collectionID =
     $collectionName =
     $collectionDescription = "";
 
     // Bind the result to variables
     $generateGrid->bind_result(
+      $collectionID,
       $collectionName,
       $collectionDescription
     );
