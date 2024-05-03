@@ -4,9 +4,8 @@
   // Connect to database
   require __DIR__ . "/../conn.php";
 
-
   // Prepare the SQL statement
-    if($CollectionID!="all-games") {
+    if($collectionID!="all-games") {
       $generateGrid = $mysqli->prepare("SELECT
       Games.GameID,
       Games.GameName,
@@ -15,12 +14,12 @@
       Games.GameQuantity,
       Games.CoverURL
       FROM Games
-      INNER JOIN collection_products ON collection_products.GameID = products.GameID
-      WHERE collection_products.CollectionID = ?
+      INNER JOIN collection_games ON collection_games.GameID = games.GameID
+      WHERE collection_games.CollectionID = ?
       ORDER BY GameName ASC"
       );
 
-      $generateGrid->bind_param("s", $CollectionID);
+      $generateGrid->bind_param("s", $collectionID);
     }
 
     else {
@@ -37,7 +36,7 @@
   $generateGrid->execute();
   $generateGrid->store_result();
 
-  // Check if the product exists
+  // Check if the game exists
   if ($generateGrid->num_rows > 0) {
     // Reset variables
     $GameName = $GameDescription = $CoverURL = "";

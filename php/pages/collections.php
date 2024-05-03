@@ -1,5 +1,5 @@
 <?php
-  $CollectionID = $_GET['ID'];
+  $collectionID = $_GET['ID'];
 ?>
 
 <!doctype html>
@@ -21,7 +21,7 @@
       require __DIR__ . "/../sql/collections/get-collection-info.php";
     ?>
 
-    <div class="games-title"><?= $CollectionID ?></?=></div>
+    <div class="games-title"><?= $collectionName ?></?=></div>
 
     <hr style="width:100%"/>
 

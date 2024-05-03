@@ -3,7 +3,7 @@
   require __DIR__ . "/../conn.php";
 
   // Prepare and bind the SQL statement
-  if ($CollectionID != "all-games") {
+  if ($collectionID != "all-games") {
     $getCollectionInfo = $mysqli->prepare(
         "SELECT
         CollectionName, CollectionDescription
@@ -11,23 +11,21 @@
         WHERE CollectionID = ?"
     );
 
-    $getCollectionInfo->bind_param("i", $CollectionID);
+    $getCollectionInfo->bind_param("s", $collectionID);
 
     // Execute the SQL statement
     $getCollectionInfo->execute();
-    $getCollectionInfo->store_result();
+    $result = $getCollectionInfo->get_result();
 
-    // Bind the result to variables
-    $getCollectionInfo->bind_result(
-      $CollectionName, $CollectionDescription
-    );
-
-    $getCollectionInfo->close();
+    // Get the results
+    $collectionInfo = $result->fetch_assoc();
+    $collectionName = $collectionInfo["CollectionName"];
+    $collectionDescription = $collectionInfo["CollectionDescription"];
   }
 
   else {
-    $CollectionName="All Games";
-    $CollectionDescription="Browse all available games.";
+    $collectionName="All Games";
+    $collectionDescription="Browse all available games.";
   }
 
   // Close the connection

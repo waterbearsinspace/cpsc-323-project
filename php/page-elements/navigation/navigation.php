@@ -6,9 +6,7 @@
   <div class="navbar-link dropdown">
     <a href="#" class="dropdown-button">COLLECTIONS</a>
       <div class="dropdown-links">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <?php require __DIR__ . "/../../sql/collections/generate-navbar-links.php"?>
       </div>
   </div>
 </nav>
