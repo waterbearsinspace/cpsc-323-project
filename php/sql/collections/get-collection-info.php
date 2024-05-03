@@ -12,7 +12,7 @@
     );
 
     $getCollectionInfo->bind_param("i", $CollectionID);
-    
+
     // Execute the SQL statement
     $getCollectionInfo->execute();
     $getCollectionInfo->store_result();
@@ -21,7 +21,7 @@
     $getCollectionInfo->bind_result(
       $CollectionName, $CollectionDescription
     );
-    
+
     $getCollectionInfo->close();
   }
 

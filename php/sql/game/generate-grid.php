@@ -4,32 +4,33 @@
   // Connect to database
   require __DIR__ . "/../conn.php";
 
+
   // Prepare the SQL statement
-    if($CollectionID="all-games") {
+    if($CollectionID!="all-games") {
+      $generateGrid = $mysqli->prepare("SELECT
+      Products.ProductID,
+      Products.ProductName,
+      Products.ProductDescription,
+      Products.ProductPrice,
+      Products.ProductQuantity,
+      Products.CoverURL
+      FROM Products
+      INNER JOIN collection_products ON collection_products.ProductID = products.ProductID
+      WHERE collection_products.CollectionID = ?
+      ORDER BY ProductName ASC"
+      );
+
+      $generateGrid->bind_param("s", $CollectionID);
+    }
+
+    else {
       $generateGrid = $mysqli->prepare(
         "SELECT
         ProductID, ProductName, ProductDescription,
         ProductPrice, ProductQuantity, CoverURL
         FROM Products
         ORDER BY ProductName ASC"
-      );    
-    }
-    
-    else {
-      $generateGrid = $mysqli->
-  $generateCart = $mysqli->prepare("SELECT
-      Products.ProductID,
-      Products.ProductName,
-      Products.ProductPrice,
-      Products.ProductQuantity,
-      Products.CoverURL,
-      FROM Products
-      INNER JOIN collection_products ON collection_products.ProductID = Collections.ProductID
-      WHERE collection_products.CollectionID = ?
-      ORDER BY ProductName ASC"
     );
-      
-      $generateGrid->bind_param("s", $CollectionID);
     }
 
   // Execute the SQL statement
