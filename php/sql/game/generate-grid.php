@@ -8,16 +8,16 @@
   // Prepare the SQL statement
     if($CollectionID!="all-games") {
       $generateGrid = $mysqli->prepare("SELECT
-      Products.ProductID,
-      Products.ProductName,
-      Products.ProductDescription,
-      Products.ProductPrice,
-      Products.ProductQuantity,
-      Products.CoverURL
-      FROM Products
-      INNER JOIN collection_products ON collection_products.ProductID = products.ProductID
+      Games.GameID,
+      Games.GameName,
+      Games.GameDescription,
+      Games.GamePrice,
+      Games.GameQuantity,
+      Games.CoverURL
+      FROM Games
+      INNER JOIN collection_products ON collection_products.GameID = products.GameID
       WHERE collection_products.CollectionID = ?
-      ORDER BY ProductName ASC"
+      ORDER BY GameName ASC"
       );
 
       $generateGrid->bind_param("s", $CollectionID);
@@ -26,10 +26,10 @@
     else {
       $generateGrid = $mysqli->prepare(
         "SELECT
-        ProductID, ProductName, ProductDescription,
-        ProductPrice, ProductQuantity, CoverURL
-        FROM Products
-        ORDER BY ProductName ASC"
+        GameID, GameName, GameDescription,
+        GamePrice, GameQuantity, CoverURL
+        FROM Games
+        ORDER BY GameName ASC"
     );
     }
 
@@ -40,13 +40,13 @@
   // Check if the product exists
   if ($generateGrid->num_rows > 0) {
     // Reset variables
-    $ProductName = $ProductDescription = $CoverURL = "";
-    $ProductID = $ProductPrice = $ProductQuantity = 0;
+    $GameName = $GameDescription = $CoverURL = "";
+    $GameID = $GamePrice = $GameQuantity = 0;
 
     // Bind the result to variables
     $generateGrid->bind_result(
-      $ProductID, $ProductName, $ProductDescription,
-      $ProductPrice, $ProductQuantity, $CoverURL
+      $GameID, $GameName, $GameDescription,
+      $GamePrice, $GameQuantity, $CoverURL
     );
 
     // Fetch the result
@@ -57,7 +57,7 @@
   }
 
   else {
-    echo "Product not found!";
+    echo "Game not found!";
   }
 
   // Close the connection

@@ -2,8 +2,8 @@
   <input type="hidden" name="UserID"
     name="UserID" value=<?= $_SESSION['id'] ?>
   >
-  <input type="hidden" name="ProductID"
-    name="ProductID" value=<?= $ProductID ?>
+  <input type="hidden" name="GameID"
+    name="GameID" value=<?= $GameID ?>
   >
 
   <button class="delete-button" type="submit" name="delete-from-cart">

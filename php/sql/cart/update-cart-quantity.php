@@ -5,15 +5,15 @@
 
     // Get the form data
     $UserID = $_POST['UserID'];
-    $ProductID = $_POST['ProductID'];
+    $GameID = $_POST['GameID'];
     $PurchaseQuantity = $_POST['PurchaseQuantity'];
 
     // Prepare update cart
     $updateCart = $mysqli->prepare(
       "UPDATE carts SET PurchaseQuantity =  ?
-      WHERE UserID = ? AND ProductID = ?"
+      WHERE UserID = ? AND GameID = ?"
       );
-    $updateCart->bind_param("iii", $PurchaseQuantity, $UserID, $ProductID);
+    $updateCart->bind_param("iii", $PurchaseQuantity, $UserID, $GameID);
 
     // Prepare delete zero
     $deleteZeroQuantity = $mysqli->prepare(

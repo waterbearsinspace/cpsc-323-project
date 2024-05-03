@@ -5,14 +5,14 @@
   // Prepare and bind the SQL statement
   $fetchGameData = $mysqli->prepare(
     "SELECT
-    ProductName, ProductDescription, ProductPrice,
-    ProductQuantity, CoverURL,
+    GameName, GameDescription, GamePrice,
+    GameQuantity, CoverURL,
     MinPlayers, MaxPlayers, PlayType
-    FROM Products
-    WHERE ProductID = ?"
+    FROM Games
+    WHERE GameID = ?"
   );
 
-  $fetchGameData->bind_param("i", $ProductID);
+  $fetchGameData->bind_param("i", $GameID);
 
   // Execute the SQL statement
   $fetchGameData->execute();
@@ -22,8 +22,8 @@
   if ($fetchGameData->num_rows > 0) {
     // Bind the result to variables
     $fetchGameData->bind_result(
-      $ProductName, $ProductDescription,
-      $ProductPrice, $ProductQuantity, $CoverURL,
+      $GameName, $GameDescription,
+      $GamePrice, $GameQuantity, $CoverURL,
       $MinPlayers, $MaxPlayers, $PlayType);
 
     // Fetch the result
@@ -31,7 +31,7 @@
   }
 
   else {
-    echo "Product not found!";
+    echo "Game not found!";
   }
 
   // Close the connection

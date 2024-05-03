@@ -14,11 +14,11 @@
 
     <!-- Fetch data -->
     <?php
-      $ProductID=$_GET['ID'];
+      $GameID=$_GET['ID'];
 
       require __DIR__ . "/../sql/game/fetch-game-data.php";
 
-      $ProductDescription = str_replace("\n", '<br>', $ProductDescription);
+      $GameDescription = str_replace("\n", '<br>', $GameDescription);
     ?>
 
     <div class="page-game-container">
@@ -28,17 +28,17 @@
 
       <div class="page-game-info-container">
         <div class="page-game-name">
-          <?= $ProductName ?>
+          <?= $GameName ?>
         </div>
 
         <hr style="width:100%; margin-bottom: 1em;"/>
 
         <div class="page-game-price">
-          $<?= $ProductPrice ?>
+          $<?= $GamePrice ?>
         </div>
 
         <div class="page-game-quantity">
-          Amount in Stock: <?= $ProductQuantity ?>
+          Amount in Stock: <?= $GameQuantity ?>
         </div>
 
         <div class="page-game-purchase-button">
@@ -76,7 +76,7 @@
         <hr style="width:100%; margin-bottom: 1em;"/>
 
         <div class="page-game-description">
-          <?= $ProductDescription ?>
+          <?= $GameDescription ?>
         </div>
 
 

@@ -5,34 +5,34 @@
 
     // Get the form data
     $UserID = $_POST['UserID'];
-    $ProductID = $_POST['ProductID'];
+    $GameID = $_POST['GameID'];
     $PurchaseQuantity = $_POST['PurchaseQuantity'];
 
     // Check if item exists in user's cart
     $exists = $mysqli->prepare(
       "SELECT *
       FROM carts
-      WHERE UserID = ? AND ProductID = ?
+      WHERE UserID = ? AND GameID = ?
       LIMIT 1"
     );
-    $exists->bind_param("ii", $UserID, $ProductID);
+    $exists->bind_param("ii", $UserID, $GameID);
     $exists->execute();
     $exists->store_result();
 
     // Prepare add to cart
     $addToCart = $mysqli->prepare(
-      "INSERT INTO carts (UserID, ProductID, PurchaseQuantity)
+      "INSERT INTO carts (UserID, GameID, PurchaseQuantity)
       VALUES (?, ?, ?)"
     );
-    $addToCart->bind_param("iii", $UserID, $ProductID, $PurchaseQuantity);
+    $addToCart->bind_param("iii", $UserID, $GameID, $PurchaseQuantity);
 
     // Prepare update cart
     $updateCart = $mysqli->prepare(
       "UPDATE carts
       SET PurchaseQuantity =  PurchaseQuantity + ?
-      WHERE UserID=? AND ProductID = ?"
+      WHERE UserID=? AND GameID = ?"
     );
-    $updateCart->bind_param("iii", $PurchaseQuantity, $UserID, $ProductID);
+    $updateCart->bind_param("iii", $PurchaseQuantity, $UserID, $GameID);
 
     if($exists->num_rows >= 1) {
       $updateCart->execute();

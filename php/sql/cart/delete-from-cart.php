@@ -10,15 +10,15 @@
 
     // Get the form data
     $UserID = $_POST['UserID'];
-    $ProductID = $_POST['ProductID'];
+    $GameID = $_POST['GameID'];
 
     // Prepare delete from cart
     $deleteFromCart = $mysqli->prepare(
       "DELETE FROM carts
       WHERE UserID = ?
-      AND ProductID = ?"
+      AND GameID = ?"
       );
-    $deleteFromCart->bind_param("ii", $UserID, $ProductID);
+    $deleteFromCart->bind_param("ii", $UserID, $GameID);
 
     // Update cart
     $deleteFromCart->execute();

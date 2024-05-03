@@ -144,17 +144,64 @@ a:hover {
 .navbar {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 40px;
-  justify-content: center;
-}
-
-.navbar-link-container {
-
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .navbar-link {
   font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  align-content: center;
+}
+
+.dropdown-button {
+  display: flex;
+  position: relative;
+  background-color:#00000000;
+  border-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dropdown-links {
+  background-color: #ffffff;
+  border-color:#00000027;
+  border-style: solid;
+  border-width: 1px;
+  display: none;
+  left: -16px;
+  min-width: 160px;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+}
+
+.dropdown-links a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-button:hover {
+  color: #282bd6;
+}
+
+.dropdown-links a:hover {
+  color: #282bd6;
+}
+
+.dropdown:hover .dropdown-links {
+  display: block;
 }
 
 /* BANNER STYLES */

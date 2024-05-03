@@ -8,10 +8,10 @@
 
     // Prepare "purchase"
     $purchase = $mysqli->prepare(
-      "UPDATE Products P, Carts C
-      SET P.ProductQuantity =
-        P.ProductQuantity - C.PurchaseQuantity
-      WHERE P.ProductID = C.ProductID
+      "UPDATE Games P, Carts C
+      SET P.GameQuantity =
+        P.GameQuantity - C.PurchaseQuantity
+      WHERE P.GameID = C.GameID
       AND C.UserID = ?"
       );
     $purchase->bind_param("i", $UserID);

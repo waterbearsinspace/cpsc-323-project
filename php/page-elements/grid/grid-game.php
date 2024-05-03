@@ -1,5 +1,5 @@
 <?php
-    $GameURL="/cpsc-332-project/php/pages/game.php?ID=" . $ProductID;
+    $GameURL="/cpsc-332-project/php/pages/game.php?ID=" . $GameID;
 ?>
 
 <div class="grid-game-container">
@@ -13,10 +13,10 @@
 
   <div class="grid-purchase-info-container">
     <a href=<?= $GameURL ?> class="grid-game-name">
-      <?= $ProductName ?>
+      <?= $GameName ?>
     </a>
     <div>
-      $<?= $ProductPrice ?>
+      $<?= $GamePrice ?>
     </div>
   </div>
 </div>

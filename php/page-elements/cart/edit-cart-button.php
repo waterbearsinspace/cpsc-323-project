@@ -3,12 +3,12 @@
     name="UserID" value=<?= $_SESSION['id'] ?>
   >
 
-  <input type="hidden" name="ProductID"
-    name="ProductID" value=<?= $ProductID ?>
+  <input type="hidden" name="GameID"
+    name="GameID" value=<?= $GameID ?>
   >
 
   <input class="numberInput" type="number" name="PurchaseQuantity"
-    name="PurchaseQuantity" min="1" max=<?= $ProductQuantity ?>
+    name="PurchaseQuantity" min="1" max=<?= $GameQuantity ?>
     value=<?= $PurchaseQuantity ?>
   >
 

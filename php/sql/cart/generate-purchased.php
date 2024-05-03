@@ -4,16 +4,16 @@
 
   // Prepare the SQL statement
   $generatePurchased = $mysqli->prepare("SELECT
-    Products.ProductID,
-    Products.ProductName,
-    Products.ProductPrice,
-    Products.ProductQuantity,
-    Products.CoverURL,
+    Games.GameID,
+    Games.GameName,
+    Games.GamePrice,
+    Games.GameQuantity,
+    Games.CoverURL,
     Carts.PurchaseQuantity
-    FROM Products
-    INNER JOIN Carts ON Products.ProductID = Carts.ProductID
+    FROM Games
+    INNER JOIN Carts ON Games.GameID = Carts.GameID
     WHERE Carts.UserID = $_SESSION[id]
-    ORDER BY ProductName ASC"
+    ORDER BY GameName ASC"
   );
 
   // Execute the SQL statement
@@ -23,13 +23,13 @@
   // Check if the product exists
   if ($generatePurchased->num_rows > 0) {
     // Reset variables
-    $ProductName = $CoverURL = "";
-    $ProductID = $ProductPrice = $ProductQuantity = $PurchaseQuantity = 0;
+    $GameName = $CoverURL = "";
+    $GameID = $GamePrice = $GameQuantity = $PurchaseQuantity = 0;
 
     // Bind the result to variables
     $generatePurchased->bind_result(
-      $ProductID, $ProductName, $ProductPrice,
-      $ProductQuantity, $CoverURL, $PurchaseQuantity);
+      $GameID, $GameName, $GamePrice,
+      $GameQuantity, $CoverURL, $PurchaseQuantity);
 
     // Fetch the result
     while($generatePurchased->fetch()) {
